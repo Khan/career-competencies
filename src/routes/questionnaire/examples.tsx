@@ -34,10 +34,10 @@ export const Examples = ({
   exampleInputs[crypto.randomUUID()] = "";
 
   return (
-    <div>
-      <h3>
+    <div id="examples">
+      <span>
         Great! Please provide some examples of how you demonstrate this skill.
-      </h3>
+      </span>
       <ul>
         {Object.keys(exampleInputs).map((key, i) => (
           <li key={key}>
@@ -46,7 +46,9 @@ export const Examples = ({
               ref={(node) => setMap(key, node)}
               value={exampleInputs[key as UUID]}
               placeholder={
-                i === 0 ? "I demonstrate this skill by..." : "Add another example"
+                i === 0
+                  ? "I demonstrate this skill by..."
+                  : "Add another example"
               }
               onChange={(e) =>
                 dispatch({

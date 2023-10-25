@@ -1,2 +1,2 @@
 export { Prompt } from "./prompt";
-export { loader } from "./prompt-loader";
+export { loader } from "./loader";

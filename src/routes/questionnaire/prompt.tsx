@@ -4,8 +4,8 @@ import { useData, useDataDispatch } from "../../context";
 
 import "./questionnaire.css";
 import { Checkbox } from "../../components";
-import { Competencies } from "../../data";
 import { Examples } from "./examples";
+import { SkillNav } from "./skill-nav";
 
 export const Prompt = () => {
   const { skill } = useLoaderData() as { skill: Skill };
@@ -13,14 +13,10 @@ export const Prompt = () => {
   const dispatch = useDataDispatch();
 
   const skillState = skills?.[skill.id] ?? {};
-  const competency = Competencies[skill.competency];
 
   return (
     <div id="prompt">
-      <h3>{competency.title}</h3>
-      <label htmlFor={skill.id}>
-        <h4>{skill.description}</h4>
-      </label>
+      <SkillNav skill={skill} />
       <Checkbox
         id={skill.id}
         labelledBy={skill.id}

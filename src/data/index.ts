@@ -4,7 +4,7 @@
  */
 export { Competencies, type Competency } from "./competencies";
 export { Skills, type Skill } from "./skills";
-export { Matrix } from "./matrix";
+export { Matrix, MatrixByExpectation } from "./matrix";
 
 /*
  *  While we don't need Levels and Tracks to calculate the skills matrix, we

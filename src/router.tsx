@@ -4,7 +4,7 @@ import {
   createHashRouter,
   redirect,
 } from "react-router-dom";
-import { Nav, Overview, Result, Prompt, promptLoader } from "./routes";
+import { Nav, Overview, Result, Prompt, questionnaireLoader } from "./routes";
 
 const router = createHashRouter([
   {
@@ -25,17 +25,16 @@ const router = createHashRouter([
       },
       {
         path: "questionnaire",
-        element: (
-          <>
-            <div>Questionnaire</div>
-            <Outlet />
-          </>
-        ),
+        element: <Outlet />,
         children: [
           {
             path: "skill/:id",
-            loader: promptLoader,
+            loader: questionnaireLoader,
             element: <Prompt />,
+          },
+          {
+            path: "*?",
+            loader: questionnaireLoader,
           },
         ],
       },
