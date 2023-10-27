@@ -16,9 +16,13 @@ Here are some of the most common scripts you'll use:
 
 ```bash
 bun run dev # starts the vite dev server
+```
 
+```bash
 bun run build && bun run preview # previews the static deploy
+```
 
+```bash
 bun run fix # runs `lint --fix` and `prettier --write`; takes care of most linting issues, alerts you to the rest
 ```
 
