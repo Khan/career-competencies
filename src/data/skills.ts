@@ -1,12 +1,12 @@
 import type { Competency, Expectation } from ".";
 import type { UUID } from "./types";
 
-export type SkillSchema = {
+export interface SkillSchema {
   competency: Competency;
   expectation: Expectation;
   id: UUID;
   description: string;
-};
+}
 
 export const Skills = {
   // Delivering Results

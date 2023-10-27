@@ -3,7 +3,7 @@ export type CheckboxProps = {
   checked: boolean;
   handleClick: () => void;
   [x: string | number | symbol]: unknown;
-};
+}
 
 export type NavArrowProps = {
   path: string;

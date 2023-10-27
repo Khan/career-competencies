@@ -1,6 +1,6 @@
 import type { Level, Skill, Track, UUID } from "../data";
 
-type SkillAction = {
+interface SkillAction {
   type: "checked" | "unchecked";
   data: Skill;
 };
@@ -13,22 +13,22 @@ type ExampleUpdatedAction = {
     };
     skillId: UUID;
   };
-};
-type UserDataUpdatedAction = {
+}
+interface UserDataUpdatedAction {
   type: "user-data-updated";
   data: User;
-};
-type ImportDataAction = {
+}
+interface ImportDataAction {
   type: "data-imported";
   data: State;
-};
+}
 export type Action =
   | SkillAction
   | ExampleUpdatedAction
   | UserDataUpdatedAction
   | ImportDataAction;
 
-type User = {
+interface User {
   firstName: string;
   lastName: string;
   email: string;
@@ -41,4 +41,4 @@ export type State = {
     { checked?: boolean; examples?: { [key: UUID]: string } }
   >;
   user?: User;
-};
+}
