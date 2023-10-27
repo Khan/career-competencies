@@ -1,7 +1,7 @@
 import { redirect, type LoaderFunction } from "react-router-dom";
 import { Skills } from "../../data";
 
-export const loader: LoaderFunction = async ({ params }) => {
+export const loader: LoaderFunction = ({ params }) => {
   if (!params.id) {
     return redirect(`/questionnaire/skill/${Object.keys(Skills)[0]}`);
   }

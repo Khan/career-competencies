@@ -58,7 +58,7 @@ describe("dataReducer", () => {
     const newState = dataReducer(initialState, action);
     expect(
       newState?.skills?.[action.data.skillId].examples?.[
-        action.data.example.key as UUID
+        action.data.example.key 
       ],
     ).toEqual(action.data.example.value);
   });

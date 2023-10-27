@@ -5,6 +5,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:import/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
@@ -29,6 +30,9 @@ module.exports = {
       "error",
       { allow: ["**/assets/*", "**/node_modules/**"] },
     ],
+    // for some reason I keep getting error re: strictNullChecks despite strict
+    // mode being enabled in tsconfig.json; disabling this rule for now
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
   },
   settings: {
     "import/parsers": {

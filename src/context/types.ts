@@ -4,7 +4,7 @@ interface SkillAction {
   type: "checked" | "unchecked";
   data: Skill;
 };
-type ExampleUpdatedAction = {
+interface ExampleUpdatedAction {
   type: "example-updated";
   data: {
     example: {
@@ -35,10 +35,10 @@ interface User {
   track: Track;
   declaredLevel: Level;
 };
-export type State = {
+export interface State {
   skills?: Record<
     UUID,
-    { checked?: boolean; examples?: { [key: UUID]: string } }
+    { checked?: boolean; examples?: Record<UUID, string> }
   >;
   user?: User;
 }

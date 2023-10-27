@@ -7,7 +7,7 @@ export const Examples = ({
   examples,
 }: {
   skillId: UUID;
-  examples: { [key: UUID]: string };
+  examples: Record<UUID, string>;
 }) => {
   const dispatch = useDataDispatch();
   const itemsRef = useRef<Map<string, HTMLInputElement>>();
