@@ -2,6 +2,25 @@
 
 Hey! Thanks for helping out with this project. Just to help you hit the ground running, here's a quick guide to some of the differences between this repo and others at Khan Academy.
 
+## Quick Start
+
+After [installing Bun](https://github.com/nedredmond/career-competencies/edit/main/README.md#installation):
+```bash
+bun install && bun run dev --open # wow so fast
+```
+
+## Scripts
+
+Here are some of the most common scripts you'll use:
+
+```bash
+bun run dev # starts the vite dev server
+
+bun run build && bun run preview # previews the static deploy
+
+bun run fix # runs `lint --fix` and `prettier --write`; takes care of most linting issues, alerts you to the rest
+```
+
 ## Bun
 
 This repo uses `bun` as a replacement for `node.js` as well as `npm` or `yarn`.
@@ -54,18 +73,6 @@ bun ./bun.lockb
 - [CI](.github/workflows/ci.yml): Runs on every PR and pushes to `main`. Tests, lints, and builds to ensure that the code is ready to be merged and/or deployed.
 
 - [Static](.github/workflows/static.yml): Runs on every push to `main` following a successful CI check. Builds and deploys [the static site](https://nedredmond.github.io/career-competencies/).
-
-## Scripts
-
-Here are some of the most common scripts you'll use:
-
-```bash
-bun run dev # starts the vite dev server
-
-bun run build && bun run preview # previews the static deploy
-
-bun run fix # runs `lint --fix` and `prettier --write`; takes care of most linting issues, alerts you to the rest
-```
 
 ## Configs
 
