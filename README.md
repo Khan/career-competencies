@@ -5,6 +5,7 @@ Hey! Thanks for helping out with this project. Just to help you hit the ground r
 ## Quick Start
 
 After [installing Bun](https://github.com/nedredmond/career-competencies/edit/main/README.md#installation):
+
 ```bash
 bun install && bun run dev --open # wow so fast
 ```
