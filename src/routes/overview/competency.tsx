@@ -4,7 +4,7 @@ import { ExpectationItem } from "./expectation";
 export const CompetencyItem = ({
   competency,
 }: {
-  competency: (typeof Matrix)[number];
+  competency: (typeof Matrix.byCompetency)[number];
 }) => (
   <details key={competency.key}>
     <summary>{competency.title}</summary>

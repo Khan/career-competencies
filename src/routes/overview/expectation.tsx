@@ -1,7 +1,7 @@
 import type { Matrix } from "../../data";
 import { SkillItem } from "./skill";
 
-type Expectation = (typeof Matrix)[number]["expectations"][number];
+type Expectation = (typeof Matrix.byCompetency)[number]["expectations"][number];
 
 export const ExpectationItem = ({
   expectation,
