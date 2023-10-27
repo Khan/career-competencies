@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "prettier:write": "prettier --write .",
-    "fix": "bun run lint && bun run prettier:write",
-    "preview": "vite preview"
+    "prettier": "prettier --write .",
+    "prettier:ci": "prettier --check .",
+    "fix": "bun run lint --fix && bun run prettier",
+    "lint:ci": "bun run lint && bun run prettier:ci"
   },
   "dependencies": {
     "@khanacademy/wonder-blocks-clickable": "^4.0.8",
