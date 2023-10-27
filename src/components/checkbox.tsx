@@ -3,7 +3,7 @@ import circleCheckedIcon from "@phosphor-icons/core/regular/check-circle.svg";
 import { PhosphorIcon } from "@khanacademy/wonder-blocks-icon";
 import Clickable from "@khanacademy/wonder-blocks-clickable";
 import type { CheckboxProps } from "./types";
-import "./checkbox.css"
+import "./checkbox.css";
 
 export const Checkbox = ({
   label,

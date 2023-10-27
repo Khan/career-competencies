@@ -9,6 +9,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/strict",
     "prettier",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
@@ -33,6 +34,14 @@ module.exports = {
     // for some reason I keep getting error re: strictNullChecks despite strict
     // mode being enabled in tsconfig.json; disabling this rule for now
     "@typescript-eslint/prefer-nullish-coalescing": "off",
+    // map href to to for react-router-dom
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["NavLink", "Link"],
+        specialLink: ["to"],
+      },
+    ],
   },
   settings: {
     "import/parsers": {
@@ -44,5 +53,11 @@ module.exports = {
       },
     },
     react: { version: "detect" },
+    "jsx-a11y": {
+      components: {
+        Link: "a",
+        NavLink: "a",
+      },
+    },
   },
 };
