@@ -87,3 +87,5 @@ bun ./bun.lockb
 ## Router
 
 Because GitHub Pages doesn't support single page apps, we use a hash router. This means the URL will contain a `#` after the domain name. For example, `https://khan.github.io/career-competencies/#/whatever`. More complex solutions are out there, like [this one](https://github.com/rafgraph/spa-github-pages), but they're not worth the effort for this project.
+
+If you'd like to see that problem in action, change the `hashRouter` to a `browserRouter` then run `bun run build && bun run preview`. Navigate anywhere and click "refresh". You'll get a 404.
