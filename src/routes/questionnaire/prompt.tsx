@@ -36,9 +36,9 @@ export const Prompt = () => {
           )
         }
       />
-      {skillState.checked ? (
+      {skillState.checked && (
         <Examples skillId={skill.id} examples={skillState.examples ?? {}} />
-      ) : null}
+      )}
     </div>
   );
 };

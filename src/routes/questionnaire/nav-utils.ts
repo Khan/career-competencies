@@ -21,7 +21,7 @@ export const jumpToNextExpectation = (skill: Skill, rev?: boolean) => {
 export const jumpToNextCompetency = (skill: Skill, rev?: boolean) => {
   const competencyKey = increment(
     skill.competency,
-    Object.keys(Competencies),
+    Competencies.map(({ key }) => key),
     rev,
   );
   const competency = Matrix.byCompetency.find(
