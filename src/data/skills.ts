@@ -889,175 +889,175 @@ export const Skills = {
 
   // Inclusive Collaboration
   // Beginner
-  "2bfb588f-5b74-441f-a3ce-4bc7e07a5dbc": {
+  "632354f4-9f93-4d08-b570-420d03a0d3f6": {
     competency: "inclusiveCollaboration",
     expectation: "beginner",
-    id: "e296f6fa-dc31-475c-a145-4a8d46c9cd66",
+    id: "632354f4-9f93-4d08-b570-420d03a0d3f6",
     description:
       "You demonstrate self-awareness of personal biases and acknowledges different work styles.",
   },
-  "c86dd7a6-f8e4-4888-b80b-12221da98ef4": {
+  "2452aa70-bc38-4bae-8177-1c39735670b9": {
     competency: "inclusiveCollaboration",
     expectation: "beginner",
-    id: "b77bafb5-ff60-4f97-b9e4-c09e0a0e1e9d",
+    id: "2452aa70-bc38-4bae-8177-1c39735670b9",
     description:
       "You demonstrate empathy by sharing personal experiences, including strengths, weaknesses, and failures.",
   },
-  "f28e1024-e87a-431a-ab2b-1ea13a4e8e54": {
+  "c7b8d1e3-1c91-4589-ac7b-f1ef4ca64ce0": {
     competency: "inclusiveCollaboration",
     expectation: "beginner",
-    id: "c76e2d47-a568-4216-9bad-bdd27df30b0b",
+    id: "c7b8d1e3-1c91-4589-ac7b-f1ef4ca64ce0",
     description:
       "You demonstrate self-awareness by understanding the impact of your actions and their reception by others.",
   },
-  "bb21b9dd-3380-4212-ab73-ab3356e1a11b": {
+  "c3c374c8-c4a5-4415-b681-c13d44169d51": {
     competency: "inclusiveCollaboration",
     expectation: "beginner",
-    id: "7fce770b-cd68-4965-98e7-a649d19f8137",
+    id: "c3c374c8-c4a5-4415-b681-c13d44169d51",
     description:
       "You hold yourself accountable for cultivating an inclusive work environment and collaborative practices.",
   },
-  "73d108c6-c2c6-4de5-8275-ec82284f3a7f": {
+  "75da7507-4628-494f-a5ee-9a8c4c6aaf51": {
     competency: "inclusiveCollaboration",
     expectation: "beginner",
-    id: "e5ff1cd4-009f-4709-b154-e7ecfefe9e02",
+    id: "75da7507-4628-494f-a5ee-9a8c4c6aaf51",
     description:
       "You're learning to actively engage and collaborate with team members in various roles within and across departments/functions.",
   },
   // Intermediate
-  "21ecbc37-bce3-42c4-ab6c-f0c6a1c608d3": {
+  "d382c036-276a-4e83-9f2d-fd5f945e8ff4": {
     competency: "inclusiveCollaboration",
     expectation: "intermediate",
-    id: "2fb81883-99d4-4240-bade-74d11b1ed6ab",
+    id: "d382c036-276a-4e83-9f2d-fd5f945e8ff4",
     description:
       "You encourage open communication of diverse ideas and perspectives, facilitating collaboration towards shared goals.",
   },
-  "c0e496e5-23c9-4c0b-a9db-2b4acdf25d8f": {
+  "aa724268-7d6c-456d-a3c0-142459ad4b99": {
     competency: "inclusiveCollaboration",
     expectation: "intermediate",
-    id: "67f22ba5-5b94-41cc-8720-8eae5f35590d",
+    id: "aa724268-7d6c-456d-a3c0-142459ad4b99",
     description:
       "You lead by example in fostering an environment where everyone feels comfortable speaking openly and sharing ideas.",
   },
-  "5602d757-7a75-4c49-b79a-0ff50424fb7e": {
+  "c2318c79-887e-4705-820c-c33158ebbdc6": {
     competency: "inclusiveCollaboration",
     expectation: "intermediate",
-    id: "590d79e4-cfe1-4f0b-a088-d17608207649",
+    id: "c2318c79-887e-4705-820c-c33158ebbdc6",
     description:
       "You champion individual differences, cultivating a culture of inclusivity and collaboration.",
   },
-  "f079f849-32f1-4a69-b11b-2046559cf85c": {
+  "533f103f-f00b-4e67-9115-afc8f0540e92": {
     competency: "inclusiveCollaboration",
     expectation: "intermediate",
-    id: "96412cf6-3a05-40ee-9f7f-1b4d8df16d07",
+    id: "533f103f-f00b-4e67-9115-afc8f0540e92",
     description:
       "You listen and respond respectfully to different points of view, creating a safe space for everyone to contribute.",
   },
-  "4ef76c65-b221-411a-9270-ea57ff1814ba": {
+  "c2b37008-ad4b-47d5-9184-6f5501f28f40": {
     competency: "inclusiveCollaboration",
     expectation: "intermediate",
-    id: "c2c2b949-cbd1-4ed3-b9d1-35fe5af3b4f3",
+    id: "c2b37008-ad4b-47d5-9184-6f5501f28f40",
     description:
       "You actively collaborate with team members as both a mentor and a mentee, demonstrating engaged and reciprocal learning.",
   },
   // Advanced
-  "054883c5-9138-43d9-93c7-f22448385d3b": {
+  "cb24244d-6a91-4f6d-aa6c-f4ee9d484ead": {
     competency: "inclusiveCollaboration",
     expectation: "advanced",
-    id: "058e6f78-d909-4c9f-8cfc-596161c12ea7",
+    id: "cb24244d-6a91-4f6d-aa6c-f4ee9d484ead",
     description:
       "You uphold an inclusive environment by speaking up against non-inclusive behaviors and practices.",
   },
-  "ea507097-66a1-46dd-8941-93d07529f5fe": {
+  "7343e75b-a13b-4475-a2a0-e4436d5188db": {
     competency: "inclusiveCollaboration",
     expectation: "advanced",
-    id: "457cd20a-b0aa-416f-854c-d4368e58f0ef",
+    id: "7343e75b-a13b-4475-a2a0-e4436d5188db",
     description:
       "You embrace the diverse experiences and skills within your team, fostering a supportive and inclusive environment.",
   },
-  "7a6c0211-ae31-4ab0-8882-52ca4f0b8b3e": {
+  "6924b54d-10fc-4874-81be-a5b4fc07d01b": {
     competency: "inclusiveCollaboration",
     expectation: "advanced",
-    id: "e819239c-7cef-40e2-b0d9-b5988cbc51cb",
+    id: "6924b54d-10fc-4874-81be-a5b4fc07d01b",
     description:
       "You actively collaborate by acknowledging and giving credit where it's due.",
   },
-  "bae6c240-8148-47bd-9c85-440dd81e9454": {
+  "3fb1ec15-7532-495e-8627-676f723d9547": {
     competency: "inclusiveCollaboration",
     expectation: "advanced",
-    id: "dd8e5cc4-e1be-43c5-afe8-59398676e7fc",
+    id: "3fb1ec15-7532-495e-8627-676f723d9547",
     description:
       "You value and respect the unique perspectives that each individual brings to the team, fostering an environment where everyone feels valued and can shine.",
   },
-  "e9dcc6b8-f371-4f3f-be5a-6d82a963e2bf": {
+  "a2993053-0b21-473f-a70b-0a34d0301717": {
     competency: "inclusiveCollaboration",
     expectation: "advanced",
-    id: "25a046ae-5574-4faf-a7a4-376a234f7e01",
+    id: "a2993053-0b21-473f-a70b-0a34d0301717",
     description:
       "You actively seek and amplify diverse opinions, ensuring everyone's voice contributes to the shared goal.",
   },
-  "1bdcae1a-7699-4182-9e77-244c84fc1520": {
+  "fa50604c-bd91-417c-802a-d28d85bfa37e": {
     competency: "inclusiveCollaboration",
     expectation: "advanced",
-    id: "312f4f59-ad2e-46ea-82cd-3104bf3b2806",
+    id: "fa50604c-bd91-417c-802a-d28d85bfa37e",
     description:
       "You encourage active engagement and collaboration among team members within and across departments/functions.",
   },
   // Expert
-  "66f99389-c1b9-4828-bf06-7e1a6a3112de": {
+  "1cdc46e0-a484-4ec8-895a-5bab102e5cdb": {
     competency: "inclusiveCollaboration",
     expectation: "expert",
-    id: "8686b591-bf23-4c26-b3ba-f85c9cc87012",
+    id: "1cdc46e0-a484-4ec8-895a-5bab102e5cdb",
     description:
       "You actively recognize and reward inclusive and collaborative behavior, fostering an environment where everyone can shine, within your department.",
   },
-  "023ff6f5-4b3c-47c7-ad89-eae1ce59a7d3": {
+  "32dbdd9c-c251-4dd1-98e1-d615ca165aec": {
     competency: "inclusiveCollaboration",
     expectation: "expert",
-    id: "14192bc3-76e3-40b9-830e-301c0f0308cf",
+    id: "32dbdd9c-c251-4dd1-98e1-d615ca165aec",
     description:
       "You empower team members to practice decision-making authority.",
   },
-  "ba6f9dc6-37a3-40f7-bffb-75e4249badd7": {
+  "1bf99ced-f43e-495f-9f15-cabbc60db033": {
     competency: "inclusiveCollaboration",
     expectation: "expert",
-    id: "8c474aa5-954a-4714-851f-38911f754946",
+    id: "1bf99ced-f43e-495f-9f15-cabbc60db033",
     description:
       "You encourage and support the proposal of new ideas, empowering team members to take ownership and make decisions.",
   },
-  "41586927-b9cb-4077-aed4-8c8fc4a6b810": {
+  "3a5a1027-100d-4f58-b20c-49dd1577b96c": {
     competency: "inclusiveCollaboration",
     expectation: "expert",
-    id: "5e944909-4761-4e5a-b9a9-001f6ff1ad9d",
+    id: "3a5a1027-100d-4f58-b20c-49dd1577b96c",
     description:
       "You utilize an inclusive approach in strategic decision-making, fostering collaboration.",
   },
   // Leading Expert
-  "ba1bc956-7306-4fbe-920b-4d59a8fef2e8": {
+  "089bf7a2-3948-4098-ba22-266dbf887a63": {
     competency: "inclusiveCollaboration",
     expectation: "leading expert",
-    id: "39459c73-a136-4f1f-8a63-d6262a500028",
+    id: "089bf7a2-3948-4098-ba22-266dbf887a63",
     description:
       "You champion diversity, equity, and inclusion, influencing others to do the same and fostering a culture of inclusive collaboration across the organization.",
   },
-  "8533d3d5-284a-4c56-9347-dcf63a1b160e": {
+  "c324771d-3ebc-42a9-88f5-87c4ffa19da9": {
     competency: "inclusiveCollaboration",
     expectation: "leading expert",
-    id: "2bce2903-9c12-4713-b9b6-7bf2c8ebb52e",
+    id: "c324771d-3ebc-42a9-88f5-87c4ffa19da9",
     description:
       "You make the business case for diversity and inclusion, helping the organization understand its impact on our shared goals.",
   },
-  "f21facd0-92e4-4af9-94fa-740a2cc32871": {
+  "e80d370d-9ef4-4946-9b78-13b72808b372": {
     competency: "inclusiveCollaboration",
     expectation: "leading expert",
-    id: "d217c635-3c75-4c7b-906b-9b52f6168ae3",
+    id: "e80d370d-9ef4-4946-9b78-13b72808b372",
     description:
       "You establish accountability measures for progress in diversity, equity, and inclusion within the organization.",
   },
-  "a017b20d-1721-4a53-bd8f-02eda1515090": {
+  "dad2cd99-a02b-49af-aa8a-3b6d54ab3073": {
     competency: "inclusiveCollaboration",
     expectation: "leading expert",
-    id: "c54ff012-0cef-414b-aa8b-0339e4e6ac92",
+    id: "dad2cd99-a02b-49af-aa8a-3b6d54ab3073",
     description:
       "You recognize and reward inclusive behavior across the organization, promoting a culture where everyone can shine.",
   },
