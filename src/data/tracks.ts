@@ -5,5 +5,7 @@ export const Tracks = [
   "Software Engineer",
   "Quality Analyst",
   "Quality Engineer",
+  "Core",
 ] as const;
+
 export type Track = (typeof Tracks)[number];

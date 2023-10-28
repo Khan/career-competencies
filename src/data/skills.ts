@@ -1,8 +1,8 @@
-import type { Competency, Expectation } from ".";
+import type { Competencies, Expectation } from ".";
 import type { UUID } from "./types";
 
 export interface SkillSchema {
-  competency: Competency;
+  competency: (typeof Competencies)[number]["key"];
   expectation: Expectation;
   id: UUID;
   description: string;
@@ -12,41 +12,41 @@ export const Skills = {
   // Delivering Results
   // Beginner
   "6a4d548a-4243-46b4-85e2-fffe85174be6": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "beginner",
     id: "6a4d548a-4243-46b4-85e2-fffe85174be6",
     description: "You understand scope of work before taking on tasks.",
   },
   "070a6645-89c2-42be-ad50-31972e9a66d3": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "beginner",
     id: "070a6645-89c2-42be-ad50-31972e9a66d3",
     description:
       "You check the quality of your work following relevant examples.",
   },
   "db1ab02b-14e2-4fe4-be40-8d3e316aa6f6": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "beginner",
     id: "db1ab02b-14e2-4fe4-be40-8d3e316aa6f6",
     description:
       "You take ownership of your work product and quickly address issues as they arise.",
   },
   "de194914-9583-49dd-be95-c6de9875c4e1": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "beginner",
     id: "de194914-9583-49dd-be95-c6de9875c4e1",
     description:
       "You collect and incorporate feedback on the quality of your work.",
   },
   "4e7b45f0-10b3-458f-a524-f2deabefbdcf": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "beginner",
     id: "4e7b45f0-10b3-458f-a524-f2deabefbdcf",
     description:
       "You follow your team's best practices to bring your work to completion.",
   },
   "2690b50a-85fd-469c-bfbf-03d7f3f690ed": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "beginner",
     id: "2690b50a-85fd-469c-bfbf-03d7f3f690ed",
     description:
@@ -54,42 +54,42 @@ export const Skills = {
   },
   // Intermediate
   "ee565102-899f-4025-93f7-c4b395be20f7": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "intermediate",
     id: "ee565102-899f-4025-93f7-c4b395be20f7",
     description:
       "You estimate accurate timelines for tasks and deliver work at a steady, predictable pace to hit your deadlines.",
   },
   "4909753f-bbb1-4482-b9b6-a3e579b204ce": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "intermediate",
     id: "4909753f-bbb1-4482-b9b6-a3e579b204ce",
     description:
       "You effectively use a variety of testing methods and monitoring tools to ensure the quality and accuracy of your work while in progress and after completion.",
   },
   "d9ce28dd-cdef-49a8-8059-3d527d303dce": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "intermediate",
     id: "d9ce28dd-cdef-49a8-8059-3d527d303dce",
     description:
       "You consider many different use cases but avoid over analyzing.",
   },
   "27b702c4-88b8-4b87-a693-821725bc8eb0": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "intermediate",
     id: "27b702c4-88b8-4b87-a693-821725bc8eb0",
     description:
       "You deliver complete solutions and communicate regular progress along the way.",
   },
   "123afcb4-d131-40d1-9ad9-8442498c4142": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "intermediate",
     id: "123afcb4-d131-40d1-9ad9-8442498c4142",
     description:
       "You're a responsible user of our shared resources, considering the effect your work has outside your team and ensuring you are not diminishing their progress.",
   },
   "cfa9fce6-af70-43ea-a2f2-1593b053f291": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "intermediate",
     id: "cfa9fce6-af70-43ea-a2f2-1593b053f291",
     description:
@@ -97,42 +97,42 @@ export const Skills = {
   },
   // Advanced
   "32217fe2-8b04-462b-8c23-d29d0673c65f": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "advanced",
     id: "32217fe2-8b04-462b-8c23-d29d0673c65f",
     description:
       "You collaboratively roadmap large tracks of work with reliable estimates of time, effort, and risk, and you help ensure your team can hit deadlines.",
   },
   "23fba793-2e41-443a-b26c-a4c1c93daf63": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "advanced",
     id: "23fba793-2e41-443a-b26c-a4c1c93daf63",
     description:
       "You communicate with teammates, collaborators, and stakeholders, and you take responsibility for your plans, both when they're on track and when they aren't.",
   },
   "e59a4412-0260-41e6-b628-bbf421e2bdec": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "advanced",
     id: "e59a4412-0260-41e6-b628-bbf421e2bdec",
     description:
       "You use an array of methods to evaluate your work and to ensure the quality and accuracy of your work before delivery.",
   },
   "9e560890-2e22-43d4-9241-dae098911ca5": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "advanced",
     id: "9e560890-2e22-43d4-9241-dae098911ca5",
     description:
       "You monitor the health of your work and that of adjacent systems to avoid surprises.",
   },
   "b50d75b8-9551-4e18-9a0e-05cbdd7a2fb4": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "advanced",
     id: "b50d75b8-9551-4e18-9a0e-05cbdd7a2fb4",
     description:
       "You surface and understand how multiple large projects - worked on by you and others - intersect and ensure minimal friction .",
   },
   "621f0aab-9024-4968-961c-155ce41e7024": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "advanced",
     id: "621f0aab-9024-4968-961c-155ce41e7024",
     description:
@@ -140,35 +140,35 @@ export const Skills = {
   },
   // Expert
   "9d325d5a-ab15-49c8-b214-1e43de1eaf31": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "expert",
     id: "9d325d5a-ab15-49c8-b214-1e43de1eaf31",
     description:
       "You bring together the work of many teams and individuals into a cohesive, achievable plan that aligns with goals and deadlines.",
   },
   "5ec917c4-3485-49bf-9533-dd4c7432fcbe": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "expert",
     id: "5ec917c4-3485-49bf-9533-dd4c7432fcbe",
     description:
       "You devise, apply, and share novel and nuanced ways to ensure the quality and continued health of complex systems and processes.",
   },
   "f1c8a8dc-3738-4caf-9e2b-4091c4b35e6e": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "expert",
     id: "f1c8a8dc-3738-4caf-9e2b-4091c4b35e6e",
     description:
       "You incorporate awareness and understanding of work happening outside your team to minimize surprises and make projects more likely to succeed.",
   },
   "78320b8b-01f8-4cdb-921d-f9aeb31f2592": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "expert",
     id: "78320b8b-01f8-4cdb-921d-f9aeb31f2592",
     description:
       "You work effectively at a variety of speeds: fast when risk is low and time is tight; more deliberately when a cautious and coordinated process is warranted.",
   },
   "79672500-dbfa-42be-a170-2739a59821b0": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "expert",
     id: "79672500-dbfa-42be-a170-2739a59821b0",
     description:
@@ -176,28 +176,28 @@ export const Skills = {
   },
   // Leading Expert
   "c75edc33-4e86-45a7-ab2e-d922e6bdf03f": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "leading expert",
     id: "c75edc33-4e86-45a7-ab2e-d922e6bdf03f",
     description:
       "You remove widely-felt barriers to productivity, finding ways to make the entire team more effective at delivering solutions.",
   },
   "da278638-ed8d-495d-826e-d86fca229f3c": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "leading expert",
     id: "da278638-ed8d-495d-826e-d86fca229f3c",
     description:
       "You create tools, systems and processes to help the team deliver solutions that can be used across the industry.",
   },
   "421f9532-a70e-4ee0-9c45-f278c8f2c9b3": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "leading expert",
     id: "421f9532-a70e-4ee0-9c45-f278c8f2c9b3",
     description:
       "You work on the tasks that matter most, even if your capabilities far outweigh the challenge.",
   },
   "0b6368f7-5a21-4658-9168-cab781dba853": {
-    competency: "deliveringResults",
+    competency: "deliveringResultsForImpact",
     expectation: "leading expert",
     id: "0b6368f7-5a21-4658-9168-cab781dba853",
     description:
@@ -546,34 +546,34 @@ export const Skills = {
   // Communication
   // Beginner
   "246582ed-df3d-4ce4-9518-4413a74489bb": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "beginner",
     id: "246582ed-df3d-4ce4-9518-4413a74489bb",
     description: "You are able to clearly articulate questions.",
   },
   "8ac0a07d-2dc1-4400-afec-8be9e2846c82": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "beginner",
     id: "8ac0a07d-2dc1-4400-afec-8be9e2846c82",
     description:
       "You are learning to collaborate with team members in various roles within and across departments / functions.",
   },
   "577494db-ec22-4991-a82d-a548fc005ee1": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "beginner",
     id: "577494db-ec22-4991-a82d-a548fc005ee1",
     description:
       "You understand and follow Khan Academy's guide for using inclusive language.",
   },
   "6870e359-f417-409b-98e4-61d4dae1ccd1": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "beginner",
     id: "6870e359-f417-409b-98e4-61d4dae1ccd1",
     description:
       "You know when to keep digging vs. when to ask for help. You know when you are stuck and need to be unblocked.",
   },
   "fcac9e47-e284-4aaf-b7d5-02cf815bd885": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "beginner",
     id: "fcac9e47-e284-4aaf-b7d5-02cf815bd885",
     description:
@@ -581,49 +581,49 @@ export const Skills = {
   },
   // Intermediate
   "0a27b816-7463-4a2f-9f75-dd8825d255cc": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "intermediate",
     id: "0a27b816-7463-4a2f-9f75-dd8825d255cc",
     description:
       "You regularly write documentation related to your work that is clear and easy to follow.",
   },
   "c924dc3b-fec7-4e01-a665-7ca6b1884acf": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "intermediate",
     id: "c924dc3b-fec7-4e01-a665-7ca6b1884acf",
     description:
       "You collaborate well with team members as both a mentor and a mentee.",
   },
   "5aef9121-61d7-4086-a116-0ecc9c8abfc9": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "intermediate",
     id: "5aef9121-61d7-4086-a116-0ecc9c8abfc9",
     description:
       "You are able to take in vague requirements and ask the right questions to ensure they are clarified.",
   },
   "4f72bdbc-ba9f-44e5-a399-078f58b7a759": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "intermediate",
     id: "4f72bdbc-ba9f-44e5-a399-078f58b7a759",
     description:
       "You have a sense for when and how to appropriately and effectively offer feedback.",
   },
   "c28f9f94-212f-4d8b-92eb-0e66fea823e0": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "intermediate",
     id: "c28f9f94-212f-4d8b-92eb-0e66fea823e0",
     description:
       "You seek out and receive constructive criticism well and do not express territorialism over your work.",
   },
   "2e64ae86-68d4-41aa-9560-ff73e7918c62": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "intermediate",
     id: "2e64ae86-68d4-41aa-9560-ff73e7918c62",
     description:
       "You listen when others are speaking and make space for your colleagues to share their thoughts.",
   },
   "41a1eb8d-8b34-4f35-9d43-08acc6a1db6c": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "intermediate",
     id: "41a1eb8d-8b34-4f35-9d43-08acc6a1db6c",
     description:
@@ -631,42 +631,42 @@ export const Skills = {
   },
   // Advanced
   "d31cbc52-dfbb-4cf4-9274-2610f392805c": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "advanced",
     id: "d31cbc52-dfbb-4cf4-9274-2610f392805c",
     description:
       "Your written communication is concise and clear. You document not only the narrow projects you are working on but also larger initiatives, and you make sure the right people have the right context.",
   },
   "293f117a-10d2-4d7c-b2b3-d301f9da55e0": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "advanced",
     id: "293f117a-10d2-4d7c-b2b3-d301f9da55e0",
     description:
       "You collaborate effectively with team members in various roles within and across departments / functions. You encourage collaboration among others.",
   },
   "b7199446-3f1d-42e0-962e-9292692fa35a": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "advanced",
     id: "b7199446-3f1d-42e0-962e-9292692fa35a",
     description:
       "You quickly extract core issues from discussions and meetings. Your presence makes meetings more productive.",
   },
   "e91bd070-0d1b-43ac-b58a-c8f2ad7ce64d": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "advanced",
     id: "e91bd070-0d1b-43ac-b58a-c8f2ad7ce64d",
     description:
       "You are adept at giving and receiving constructive feedback and you both give and receive feedback clearly and with empathy.",
   },
   "033e0ccc-1f86-47e6-9e62-0b81c4bd6c6e": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "advanced",
     id: "033e0ccc-1f86-47e6-9e62-0b81c4bd6c6e",
     description:
       "You explain concepts clearly and with patience, and adjust your communication based on the audience. You offer help when asked, but you also know when to step back and let others work things out on their own.",
   },
   "1f5be919-1ff7-467d-89a6-7075d10f80da": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "advanced",
     id: "1f5be919-1ff7-467d-89a6-7075d10f80da",
     description:
@@ -674,42 +674,42 @@ export const Skills = {
   },
   // Expert
   "768df194-ca7d-4f01-a438-e2e6d5bcfc12": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "expert",
     id: "768df194-ca7d-4f01-a438-e2e6d5bcfc12",
     description:
       "You make yourself accountable for the documentation of very large projects and processes; you are able to coordinate with others to ensure documentation gets written.",
   },
   "d6d32e1d-8471-45bc-a2c4-c553a9efbd4a": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "expert",
     id: "d6d32e1d-8471-45bc-a2c4-c553a9efbd4a",
     description:
       "Your documentation ensures that systems/processes can be maintained or built upon by people who were not originally involved in building them.",
   },
   "3c0e5a2b-cc34-47cf-a022-6073c7b98107": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "expert",
     id: "3c0e5a2b-cc34-47cf-a022-6073c7b98107",
     description:
       "You help disparate groups of people collaborate, identify common goals, and reach consensus. Your facilitation skills keep conversations productive and respectful.",
   },
   "3acfaee0-5dbf-4848-bf8a-a65a97c2b843": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "expert",
     id: "3acfaee0-5dbf-4848-bf8a-a65a97c2b843",
     description:
       "Others turn to you for help giving difficult feedback. Others often seek out your advice on matters involving communication.",
   },
   "cee79a9e-0c06-469e-a893-2bc11634c16f": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "expert",
     id: "cee79a9e-0c06-469e-a893-2bc11634c16f",
     description:
       "You adapt your language to meet the needs of various audiences. Others seek you out because you're approachable, respectful, and they know they will learn from you.",
   },
   "7aa7f868-ab76-489e-8037-7733ed1fd768": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "expert",
     id: "7aa7f868-ab76-489e-8037-7733ed1fd768",
     description:
@@ -717,28 +717,28 @@ export const Skills = {
   },
   // Leading Expert
   "38287017-82cc-45f0-a357-334306f9fafb": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "leading expert",
     id: "38287017-82cc-45f0-a357-334306f9fafb",
     description:
       "You've made significant changes to how Khan Academy handles documentation, facilitation, or collaboration that has improved the functioning of the department.",
   },
   "324f76b9-4926-484e-9682-d0739612e048": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "leading expert",
     id: "324f76b9-4926-484e-9682-d0739612e048",
     description:
       "You create spaces and channels that improve cross-team and inter-departmental communication.",
   },
   "a677a230-6dbf-4be6-be1b-b68f89f34ca0": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "leading expert",
     id: "a677a230-6dbf-4be6-be1b-b68f89f34ca0",
     description:
       "Others often turn to you to make and communicate difficult decisions.",
   },
   "8c33e863-2949-41eb-9819-deba3c683bf2": {
-    competency: "communication",
+    competency: "communicationAndEngagement",
     expectation: "leading expert",
     id: "8c33e863-2949-41eb-9819-deba3c683bf2",
     description:
@@ -909,4 +909,7 @@ export const Skills = {
   },
 } as const;
 
+// This allows us to extract a literal union type from fields in the array,
+//   and if there's an issue, Typescript will complain when it's consumed
+//   instead of here.
 export type Skill = SkillSchema & (typeof Skills)[keyof typeof Skills];

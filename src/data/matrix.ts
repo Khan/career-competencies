@@ -1,18 +1,17 @@
-import { Competencies, type Competency } from "./competencies";
+import { Competencies } from "./competencies";
 import { Skills } from "./skills";
 import { Expectations } from "./levels";
 import { toTitleCase } from "../utils";
 
 export const Matrix = {
-  byCompetency: Object.keys(Competencies).map((competencyKey) => ({
-    ...Competencies[competencyKey as Competency],
-    key: competencyKey,
+  byCompetency: Competencies.map((competency) => ({
+    ...competency,
     expectations: Expectations.map((expectationKey) => ({
       key: expectationKey,
       title: toTitleCase(expectationKey),
       skills: Object.values(Skills).filter(
         (skill) =>
-          skill.competency === competencyKey &&
+          skill.competency === competency.key &&
           skill.expectation === expectationKey,
       ),
     })),
@@ -20,12 +19,11 @@ export const Matrix = {
   byExpectation: Expectations.map((expectationKey) => ({
     key: expectationKey,
     title: toTitleCase(expectationKey),
-    competencies: Object.keys(Competencies).map((competencyKey) => ({
-      ...Competencies[competencyKey as Competency],
-      key: competencyKey,
+    competencies: Competencies.map((competency) => ({
+      ...competency,
       skills: Object.values(Skills).filter(
         (skill) =>
-          skill.competency === competencyKey &&
+          skill.competency === competency.key &&
           skill.expectation === expectationKey,
       ),
     })),
