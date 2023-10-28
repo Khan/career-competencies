@@ -1,11 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable */
 
-// I'm using this in Chrome console to generate the skills data.
-// This no longer matches the schema, but it's a good starting point.
-const generateSkills = (competency: string, text: string) => {
+const generateSkills = (competency, text) => {
   const lines = text.split(/\r?\n/).map((line) => line.trim());
   let currentExpectation = "beginner";
-  const skills = [];
+  const skills = {};
   for (const line of lines) {
     if (line === "") {
       continue;
@@ -22,12 +20,13 @@ const generateSkills = (competency: string, text: string) => {
       currentExpectation = line.toLowerCase();
       continue;
     }
-    skills.push({
+    const id = crypto.randomUUID();
+    skills[id] = {
       competency: competency,
       expectation: currentExpectation,
       id: crypto.randomUUID(),
       description: line,
-    });
+    };
   }
   return skills;
 };
