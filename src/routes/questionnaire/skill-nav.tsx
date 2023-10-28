@@ -9,7 +9,14 @@ import {
 } from "./nav-utils";
 
 export const SkillNav = ({ skill }: { skill: Skill }) => {
-  const competency = Competencies[skill.competency];
+  const competency = Competencies.find((c) => c.key === skill.competency);
+
+  if (!competency) {
+    throw new Error(
+      `Could not find competency for skill ${skill.id}: (${skill.description})`,
+    );
+  }
+
   const basePath = "/questionnaire/skill/";
 
   return (
