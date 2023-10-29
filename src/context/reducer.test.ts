@@ -69,9 +69,12 @@ describe("dataReducer", () => {
       data: Skills[SkillIDs[0] as keyof typeof Skills],
     };
     const newState = dataReducer(initialState, action);
-    expect(newState.skills![SkillIDs[0]].checked).toBe(false);
-    expect(newState.skills![SkillIDs[0]].examples).toEqual(
-      initialState.skills![SkillIDs[0]].examples,
+    if (!newState.skills || !initialState.skills) {
+      expect.unreachable("skills should not be undefined");
+    }
+    expect(newState.skills[SkillIDs[0]].checked).toBe(false);
+    expect(newState.skills[SkillIDs[0]].examples).toEqual(
+      initialState.skills[SkillIDs[0]].examples,
     );
   });
 
