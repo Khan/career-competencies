@@ -9,8 +9,6 @@ export interface SkillSchema {
 }
 
 export const Skills = {
-  // Delivering Results
-  // Beginner
   "6a4d548a-4243-46b4-85e2-fffe85174be6": {
     competency: "deliveringResultsForImpact",
     expectation: "beginner",
@@ -46,7 +44,7 @@ export const Skills = {
     description:
       "As you participate in team planning, you're developing your ability to estimate work timelines that lead to impactful outcomes.",
   },
-  // Intermediate
+
   "ee565102-899f-4025-93f7-c4b395be20f7": {
     competency: "deliveringResultsForImpact",
     expectation: "intermediate",
@@ -89,7 +87,7 @@ export const Skills = {
     description:
       "You identify important trade-offs and negotiate them, with the aim of making decisions that have a positive, broad-reaching impact.",
   },
-  // Advanced
+
   "32217fe2-8b04-462b-8c23-d29d0673c65f": {
     competency: "deliveringResultsForImpact",
     expectation: "advanced",
@@ -132,7 +130,7 @@ export const Skills = {
     description:
       "You anticipate deviations from standard practices and find practical ways to move forward.",
   },
-  // Expert
+
   "9d325d5a-ab15-49c8-b214-1e43de1eaf31": {
     competency: "deliveringResultsForImpact",
     expectation: "expert",
@@ -168,7 +166,7 @@ export const Skills = {
     description:
       "You develop and implement insightful metrics that help teams better understand their work's value and potential, fostering a culture of informed decision-making for maximum effectiveness.",
   },
-  // Leading Expert
+
   "c75edc33-4e86-45a7-ab2e-d922e6bdf03f": {
     competency: "deliveringResultsForImpact",
     expectation: "leading expert",
@@ -198,8 +196,6 @@ export const Skills = {
       "You craft systems that operate efficiently, without a need for your involvement, throughout Khan Academy and beyond.",
   },
 
-  // Domain Expertise
-  // Beginner
   "d326c7b7-3385-44c5-9fac-c22ac57ef843": {
     competency: "domainExpertise",
     expectation: "beginner",
@@ -218,7 +214,7 @@ export const Skills = {
     id: "4a66cc62-3d84-4b19-b531-79b8cd7d7603",
     description: "You seize opportunities to increase your knowledge.",
   },
-  // Intermediate
+
   "19806530-1c93-4bc9-a07a-2f3d5ee13eca": {
     competency: "domainExpertise",
     expectation: "intermediate",
@@ -254,7 +250,7 @@ export const Skills = {
     description:
       "You understand why your work is important and how it relates to the team and organizational goals.",
   },
-  // Advanced
+
   "05efbede-7edd-462c-9187-693dd66daf26": {
     competency: "domainExpertise",
     expectation: "advanced",
@@ -290,7 +286,7 @@ export const Skills = {
     description:
       "You share your knowledge with your coworkers. You're able to explain topics about which you know a great deal to those who know less in a way that is understandable and not condescending.",
   },
-  // Expert
+
   "c2fca453-9b4c-4708-9efe-639c2bddc48c": {
     competency: "domainExpertise",
     expectation: "expert",
@@ -319,7 +315,7 @@ export const Skills = {
     description:
       "Work you have done or that is based on your expertise has consistently been successful. Your expertise helps projects and teams achieve and exceed their goals.",
   },
-  // Leading Expert
+
   "49ec3d97-bd66-4a47-bed9-df521331e774": {
     competency: "domainExpertise",
     expectation: "leading expert",
@@ -349,8 +345,6 @@ export const Skills = {
       "You contribute to the advancement of the wider industry in your domain.",
   },
 
-  // Problem Solving
-  // Beginner
   "6d8bb4c2-4bbc-4212-9d52-b47cc178fb72": {
     competency: "problemSolving",
     expectation: "beginner",
@@ -386,7 +380,7 @@ export const Skills = {
     description:
       "You approach each new task as an opportunity to learn and continually apply what you've learned to each new challenge.",
   },
-  // Intermediate
+
   "0d7a342a-faed-43ba-bd33-bc47980b3297": {
     competency: "problemSolving",
     expectation: "intermediate",
@@ -429,7 +423,7 @@ export const Skills = {
     description:
       "You have strong root cause analysis skills, allowing you to determine source of issues in unfamiliar settings.",
   },
-  // Advanced
+
   "c71b0b14-a74c-43c4-bf23-c0824f660b47": {
     competency: "problemSolving",
     expectation: "advanced",
@@ -472,7 +466,7 @@ export const Skills = {
     description:
       "You are adept at making decisions that involve a significant number of factors and have broad implications.",
   },
-  // Expert
+
   "0357aa79-01b0-4834-80b4-a6cb28ab38f9": {
     competency: "problemSolving",
     expectation: "expert",
@@ -508,7 +502,7 @@ export const Skills = {
     description:
       "You are able to look ahead 6-12 months to identify areas of greatest need for the function or a particular project, and turn this into a roadmap with actionable milestones.",
   },
-  // Leading Expert
+
   "3c645519-d852-49b9-bbf4-2da68d30edf1": {
     competency: "problemSolving",
     expectation: "leading expert",
@@ -537,8 +531,6 @@ export const Skills = {
     description: "You create new solutions that solve industry-wide problems.",
   },
 
-  // Communication
-  // Beginner
   "246582ed-df3d-4ce4-9518-4413a74489bb": {
     competency: "communicationAndEngagement",
     expectation: "beginner",
@@ -581,7 +573,7 @@ export const Skills = {
     description:
       "You align your actions with your words and hold yourself accountable.",
   },
-  // Intermediate
+
   "0a27b816-7463-4a2f-9f75-dd8825d255cc": {
     competency: "communicationAndEngagement",
     expectation: "intermediate",
@@ -617,7 +609,7 @@ export const Skills = {
     description:
       "You listen when others are speaking and make space for your colleagues to share their thoughts.",
   },
-  // Advanced
+
   "d31cbc52-dfbb-4cf4-9274-2610f392805c": {
     competency: "communicationAndEngagement",
     expectation: "advanced",
@@ -653,7 +645,7 @@ export const Skills = {
     description:
       "You are an attentive and empathetic listener, ensuring that everyone you're working with feels heard and engaged.",
   },
-  // Expert
+
   "768df194-ca7d-4f01-a438-e2e6d5bcfc12": {
     competency: "communicationAndEngagement",
     expectation: "expert",
@@ -689,7 +681,7 @@ export const Skills = {
     description:
       "You not only practice mindful communication and active listening in your interactions, but also encourage and facilitate these practices in others, fostering an overall culture of engagement.",
   },
-  // Leading Expert
+
   "38287017-82cc-45f0-a357-334306f9fafb": {
     competency: "communicationAndEngagement",
     expectation: "leading expert",
@@ -719,8 +711,6 @@ export const Skills = {
       "Your presence and example has a strong, positive influence on Khan Academy's working environment.",
   },
 
-  // Leadership
-  // Beginner
   "3a3eadd2-3f50-48e5-b4ff-0b6c97148e67": {
     competency: "leadership",
     expectation: "beginner",
@@ -742,7 +732,7 @@ export const Skills = {
     description:
       "You regularly seek feedback, demonstrating commitment to personal growth and improvement.",
   },
-  // Intermediate
+
   "bdab95f6-ecf5-4613-b519-fb9d08d8671f": {
     competency: "leadership",
     expectation: "intermediate",
@@ -778,7 +768,7 @@ export const Skills = {
     description:
       "You step up for small leadership opportunities, like mentoring or leading a working group, showing your growing leadership capabilities.",
   },
-  // Advanced
+
   "fd9ac750-71b5-4413-9b2b-ac1b14d1b355": {
     competency: "leadership",
     expectation: "advanced",
@@ -821,7 +811,7 @@ export const Skills = {
     description:
       "You frequently take on roles involving direct leadership, such as coordinating long-term projects or initiatives.",
   },
-  // Expert
+
   "d6a9aec7-4c16-4815-9ccd-ef9fc72a930d": {
     competency: "leadership",
     expectation: "expert",
@@ -857,7 +847,7 @@ export const Skills = {
     description:
       "You consistently make hard decisions in the face of uncertainty, demonstrating resilience and determination.",
   },
-  // Leading Expert
+
   "ff91ea5e-756b-4a10-968e-c1d1a04887c4": {
     competency: "leadership",
     expectation: "leading expert",
@@ -887,8 +877,6 @@ export const Skills = {
       "Your leadership is cited by many on the team as a significantly positive aspect of working at Khan Academy.",
   },
 
-  // Inclusive Collaboration
-  // Beginner
   "632354f4-9f93-4d08-b570-420d03a0d3f6": {
     competency: "inclusiveCollaboration",
     expectation: "beginner",
@@ -924,7 +912,7 @@ export const Skills = {
     description:
       "You're learning to actively engage and collaborate with team members in various roles within and across departments/functions.",
   },
-  // Intermediate
+
   "d382c036-276a-4e83-9f2d-fd5f945e8ff4": {
     competency: "inclusiveCollaboration",
     expectation: "intermediate",
@@ -960,7 +948,7 @@ export const Skills = {
     description:
       "You actively collaborate with team members as both a mentor and a mentee, demonstrating engaged and reciprocal learning.",
   },
-  // Advanced
+
   "cb24244d-6a91-4f6d-aa6c-f4ee9d484ead": {
     competency: "inclusiveCollaboration",
     expectation: "advanced",
@@ -1003,7 +991,7 @@ export const Skills = {
     description:
       "You encourage active engagement and collaboration among team members within and across departments/functions.",
   },
-  // Expert
+
   "1cdc46e0-a484-4ec8-895a-5bab102e5cdb": {
     competency: "inclusiveCollaboration",
     expectation: "expert",
@@ -1032,7 +1020,7 @@ export const Skills = {
     description:
       "You utilize an inclusive approach in strategic decision-making, fostering collaboration.",
   },
-  // Leading Expert
+
   "089bf7a2-3948-4098-ba22-266dbf887a63": {
     competency: "inclusiveCollaboration",
     expectation: "leading expert",
@@ -1060,6 +1048,390 @@ export const Skills = {
     id: "dad2cd99-a02b-49af-aa8a-3b6d54ab3073",
     description:
       "You recognize and reward inclusive behavior across the organization, promoting a culture where everyone can shine.",
+  },
+  "73d82cf6-0a7a-4b70-a770-0be1314a35a0": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "beginner",
+    id: "73d82cf6-0a7a-4b70-a770-0be1314a35a0",
+    description:
+      "You are open to learning and receptive to feedback aimed at improving your leadership skills.",
+  },
+  "f6edd6f6-3830-4352-bebd-16b353d67393": {
+    competency: "coachingAndFeedback",
+    expectation: "beginner",
+    id: "f6edd6f6-3830-4352-bebd-16b353d67393",
+    description:
+      "You understand the importance of giving constructive feedback and make initial attempts to deliver it to your team members.",
+  },
+  "8eb34903-ddeb-4bdd-a6f5-377f11a2081b": {
+    competency: "coachingAndFeedback",
+    expectation: "beginner",
+    id: "8eb34903-ddeb-4bdd-a6f5-377f11a2081b",
+    description:
+      "You are aware of the role of active listening in coaching and feedback and have started to practice this skill.",
+  },
+  "bd92b9f4-3028-44c8-a7db-ac9395aa1e3c": {
+    competency: "coachingAndFeedback",
+    expectation: "beginner",
+    id: "bd92b9f4-3028-44c8-a7db-ac9395aa1e3c",
+    description:
+      "You acknowledge the accomplishments of team members, fostering a positive work environment.",
+  },
+  "be29b04c-42d6-432c-9f1b-4267c23ebd32": {
+    competency: "coachingAndFeedback",
+    expectation: "intermediate",
+    id: "be29b04c-42d6-432c-9f1b-4267c23ebd32",
+    description:
+      "Building on your openness to feedback, you now actively seek it out to understand your areas for improvement as a leader.",
+  },
+  "7cd0ffd5-3255-45ca-87f9-327861b40fa7": {
+    competency: "coachingAndFeedback",
+    expectation: "intermediate",
+    id: "7cd0ffd5-3255-45ca-87f9-327861b40fa7",
+    description:
+      "You consistently provide constructive feedback to your team members in a way that is respectful and supportive, focusing on specific behaviors and their impact.",
+  },
+  "f1ed72b3-922e-458e-932e-f9721750879e": {
+    competency: "coachingAndFeedback",
+    expectation: "intermediate",
+    id: "f1ed72b3-922e-458e-932e-f9721750879e",
+    description:
+      "You regularly practice active listening in both one-on-one conversations and in facilitating discussions on your team.",
+  },
+  "a1522ecc-83ae-4041-855e-78d81fdb4a40": {
+    competency: "coachingAndFeedback",
+    expectation: "intermediate",
+    id: "a1522ecc-83ae-4041-855e-78d81fdb4a40",
+    description:
+      "You make it a regular practice to celebrate both individual and team successes, contributing to a positive and joyful work environment.",
+  },
+  "e8da119c-693b-4e6a-beea-e8e175feae52": {
+    competency: "coachingAndFeedback",
+    expectation: "advanced",
+    id: "e8da119c-693b-4e6a-beea-e8e175feae52",
+    description:
+      "You regularly incorporate feedback into your leadership style, using it as a tool for continuous improvement and coaching your team to do the same.",
+  },
+  "17d72050-58a6-4f74-97c3-f6ee519236e0": {
+    competency: "coachingAndFeedback",
+    expectation: "advanced",
+    id: "17d72050-58a6-4f74-97c3-f6ee519236e0",
+    description:
+      "You recognize that different team members may have different needs and learning styles, thus you are adept at tailoring your coaching and feedback to suit individual preferences and abilities.",
+  },
+  "3e3045c1-a48a-4bec-8c80-038e2d47baf3": {
+    competency: "coachingAndFeedback",
+    expectation: "advanced",
+    id: "3e3045c1-a48a-4bec-8c80-038e2d47baf3",
+    description:
+      "You pay close attention to what is being said and what is not being said; you ask clarifying questions; you show empathy to fully understand the concerns and perspectives of others.",
+  },
+  "569cfdc4-00f0-4f75-96a9-68da60ae1afa": {
+    competency: "coachingAndFeedback",
+    expectation: "advanced",
+    id: "569cfdc4-00f0-4f75-96a9-68da60ae1afa",
+    description:
+      "Your feedback & coaching create opportunities for shared success, turning challenges into learning experiences and celebrating achievements across your team.",
+  },
+  "1c7751aa-90d4-4a4d-a99c-04490fb4e4da": {
+    competency: "coachingAndFeedback",
+    expectation: "expert",
+    id: "1c7751aa-90d4-4a4d-a99c-04490fb4e4da",
+    description:
+      "You cultivate an environment where specific, actionable feedback is solicited frequently, given effectively, and acted upon, leading to a positive cycle of improvement.",
+  },
+  "ffea9268-65c6-41e2-877d-a2586f75ab62": {
+    competency: "coachingAndFeedback",
+    expectation: "expert",
+    id: "ffea9268-65c6-41e2-877d-a2586f75ab62",
+    description:
+      "You take active listening a step further by creating a culture of empathy and understanding within your team, helping them feel valued and heard.",
+  },
+  "cd6f3d57-2a4b-4ffd-975d-5e2cc3d19537": {
+    competency: "coachingAndFeedback",
+    expectation: "expert",
+    id: "cd6f3d57-2a4b-4ffd-975d-5e2cc3d19537",
+    description:
+      "Your coaching & feedback help foster a joyful and supportive work environment where successes are celebrated, challenges are welcomed, and growth is continuous.",
+  },
+  "6944a1bb-b20a-4d3b-81be-fe1ec2af5987": {
+    competency: "coachingAndFeedback",
+    expectation: "leading expert",
+    id: "6944a1bb-b20a-4d3b-81be-fe1ec2af5987",
+    description:
+      "You are widely recognized as an example of excellence in setting the highest standard for integrating feedback and coaching into your team's development. Your approach has become the benchmark for others to follow.",
+  },
+  "012843b5-16a4-4491-ae5e-42b9ec1890d4": {
+    competency: "coachingAndFeedback",
+    expectation: "leading expert",
+    id: "012843b5-16a4-4491-ae5e-42b9ec1890d4",
+    description:
+      "Your influence extends throughout the organization as you architect a culture where feedback is not just a process but a fundamental part of growth. You've expanded the horizons of employees across the company, fostering an environment of continuous learning, personal development, and delivery of high-quality work.",
+  },
+  "efb7caa7-7ae9-43a8-ab9e-ba6f5d338bc3": {
+    competency: "coachingAndFeedback",
+    expectation: "leading expert",
+    id: "efb7caa7-7ae9-43a8-ab9e-ba6f5d338bc3",
+    description:
+      "Your dedication to fostering open dialogue, active listening, and continual skill development has transformed your team into a high-performing group that excels in collaboration within and across departments.",
+  },
+  "d0e15605-82d4-4c73-bcae-69d8a6a7a09f": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "beginner",
+    id: "d0e15605-82d4-4c73-bcae-69d8a6a7a09f",
+    description:
+      '"• You are beginning to demonstrate self-awareness regarding your own emotional state when confronted with change and/or challenging situations, and are showing the early signs of using what you know to better inform your future actions.',
+  },
+  "741f4ed8-86a6-4a51-874b-f441b86fa3a5": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "beginner",
+    id: "741f4ed8-86a6-4a51-874b-f441b86fa3a5",
+    description:
+      "You can make decisions when required, and are able to communicate the reasons behind these decisions to your team when asked.",
+  },
+  "22b55bf4-bfa5-480d-a89b-c2bfdb9ec5ba": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "beginner",
+    id: "22b55bf4-bfa5-480d-a89b-c2bfdb9ec5ba",
+    description:
+      'You understand that change can be difficult for people to accept and are beginning to identify ways to more readily adapt to change yourself."',
+  },
+  "0e199882-5e0e-4c87-8b6d-834d8148698d": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "intermediate",
+    id: "0e199882-5e0e-4c87-8b6d-834d8148698d",
+    description:
+      '"• You demonstrate the ability to stay calm in uncomfortable situations and are beginning to develop self-regulation by choosing to manage your emotions in the moment.',
+  },
+  "fadeb057-d0ad-4b9b-9c32-c18a47c3c910": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "intermediate",
+    id: "fadeb057-d0ad-4b9b-9c32-c18a47c3c910",
+    description:
+      "You make decisions in challenging situations and can explain your rationale, even when consensus may not be reached.",
+  },
+  "dc9e83e1-1062-4c1f-8526-4d30d407d637": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "intermediate",
+    id: "dc9e83e1-1062-4c1f-8526-4d30d407d637",
+    description:
+      "You actively seek to understand the rationale behind decisions that benefit the organization in an effort to commit to them, even if you disagree with them.",
+  },
+  "41c5fc1d-040e-4d6a-aed8-ca1b520a0023": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "intermediate",
+    id: "41c5fc1d-040e-4d6a-aed8-ca1b520a0023",
+    description:
+      'You can foresee the impacts of change on your team and stakeholders, and have started to develop strategies to manage it effectively."',
+  },
+  "cf1acea7-20eb-49e5-9d08-a91f9d08abb3": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "advanced",
+    id: "cf1acea7-20eb-49e5-9d08-a91f9d08abb3",
+    description:
+      '"• You consistently reflect on your behaviors, thoughts, and feelings when encountering change and/or challenging situations.',
+  },
+  "d75af8af-3c3f-4913-bd87-673024fcac44": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "advanced",
+    id: "d75af8af-3c3f-4913-bd87-673024fcac44",
+    description:
+      "You are able to make and stand by tough decisions that benefit the organization, sharing your reasoning in a transparent manner.",
+  },
+  "06d3aeb5-8040-4b24-92ce-b6f78b6a599f": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "advanced",
+    id: "06d3aeb5-8040-4b24-92ce-b6f78b6a599f",
+    description:
+      "You voice your disagreement in a productive manner while decisions open for input are being evaluated in an effort to facilitate the best outcomes; once the decision has been made, you commit to it.",
+  },
+  "0da0de80-3369-4140-b884-7474935dff71": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "advanced",
+    id: "0da0de80-3369-4140-b884-7474935dff71",
+    description:
+      'You empathize with your team by understanding the impact of decsions on them, and you guide them through change by addressing their concerns and resistance effectively."',
+  },
+  "4437efc8-2097-4edc-9f08-1fcc388f0fe5": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "expert",
+    id: "4437efc8-2097-4edc-9f08-1fcc388f0fe5",
+    description:
+      '"• Self-awareness, self-regulation and empathy are now hallmarks of your leadership style, helping you navigate complex emotions and facilitate effective communication during challenging conversations.',
+  },
+  "8eda6299-5ee1-480c-97de-479da58a5039": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "expert",
+    id: "8eda6299-5ee1-480c-97de-479da58a5039",
+    description:
+      "You consistently make and stand by decisions that benefit the organization, sharing your thought process in a way that fosters trust, even when consensus is hard to reach.",
+  },
+  "8e51e269-f731-4688-ae02-bc29881d68eb": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "expert",
+    id: "8e51e269-f731-4688-ae02-bc29881d68eb",
+    description:
+      "You model 'disagree and commit' leadership by providing relevent facts that support your dissenting opinion, by actively committing to the achievement of the goal once the final decision has been made, and by leading your team and colleagues to support the decision.",
+  },
+  "5c70ed81-c584-48a7-865d-06cc6b1f4860": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "expert",
+    id: "5c70ed81-c584-48a7-865d-06cc6b1f4860",
+    description:
+      'You have become adept at managing change, using your understanding of its impacts to guide others through it, and addressing resistance in a productive and empathetic manner."',
+  },
+  "0b2170c0-07f8-4435-a347-48d986fed1e0": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "leading expert",
+    id: "0b2170c0-07f8-4435-a347-48d986fed1e0",
+    description:
+      '"• You have earned respect across the organization for your mastery of emotional intelligence in your conversations as a tool to manage complex emotions and facilitate effective and empathetic communication.',
+  },
+  "67a61645-73fe-4d3b-80cd-ddd811a20c2f": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "leading expert",
+    id: "67a61645-73fe-4d3b-80cd-ddd811a20c2f",
+    description:
+      "Your ability to make and stand by tough decisions, along with your transparency about the rationale, has earned you the respect of your team and the organization.",
+  },
+  "b054c1ae-1f74-4655-a862-d4453604a985": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "leading expert",
+    id: "b054c1ae-1f74-4655-a862-d4453604a985",
+    description:
+      "Your opinion and feedback is often sought by others when important decisions are being evaluated because of your mastery of 'disagree and commit'.",
+  },
+  "ddb5ac8d-85ed-476b-b63a-216cbaeaae9b": {
+    competency: "navigateChangeAndDifficulty",
+    expectation: "leading expert",
+    id: "ddb5ac8d-85ed-476b-b63a-216cbaeaae9b",
+    description:
+      'Your understanding of change and its impacts has made you a guide for others in times of transformation, skillfully managing resistance and fostering acceptance and adoption to deliver maximum benefit."',
+  },
+  "b9ecd5b3-e0ca-49e4-81d2-cc4f976e8b89": {
+    competency: "ensuresAccountability",
+    expectation: "beginner",
+    id: "b9ecd5b3-e0ca-49e4-81d2-cc4f976e8b89",
+    description:
+      '"• You recognize the importance of meeting intended outcomes and are learning to monitor progress towards these goals.',
+  },
+  "a890bc48-2de7-4cc3-a316-d16fed3ea44e": {
+    competency: "ensuresAccountability",
+    expectation: "beginner",
+    id: "a890bc48-2de7-4cc3-a316-d16fed3ea44e",
+    description:
+      "You take responsibility for your decisions, actions, and failures.",
+  },
+  "2ad984d7-bcfe-4a57-9352-e0317aff09bc": {
+    competency: "ensuresAccountability",
+    expectation: "beginner",
+    id: "2ad984d7-bcfe-4a57-9352-e0317aff09bc",
+    description:
+      "You are working to provide clarity about the various roles & responsibilities on your team.",
+  },
+  "553b8ae6-0647-4327-bf56-3faf868961b1": {
+    competency: "ensuresAccountability",
+    expectation: "beginner",
+    id: "553b8ae6-0647-4327-bf56-3faf868961b1",
+    description: 'You follow through on commitments."',
+  },
+  "cabb1536-83d7-4ca5-8c4e-2ad506e9ed2e": {
+    competency: "ensuresAccountability",
+    expectation: "intermediate",
+    id: "cabb1536-83d7-4ca5-8c4e-2ad506e9ed2e",
+    description:
+      "\"• You have begun implementing periodic review & feedback of your team's work to help measure progress against key milestones.",
+  },
+  "8977f95f-6144-4e2f-b217-75d1e35490fa": {
+    competency: "ensuresAccountability",
+    expectation: "intermediate",
+    id: "8977f95f-6144-4e2f-b217-75d1e35490fa",
+    description:
+      "You have started adjusting plans as needed, demonstrating flexibility in prioritization and problem-solving.",
+  },
+  "65ece652-3803-4181-9962-f1d561cb98bd": {
+    competency: "ensuresAccountability",
+    expectation: "intermediate",
+    id: "65ece652-3803-4181-9962-f1d561cb98bd",
+    description:
+      "You act with a clear sense of ownership for your teams' decisions, actions, and failures.",
+  },
+  "4a7b5ed8-6875-4ace-ab72-23f5edf251ec": {
+    competency: "ensuresAccountability",
+    expectation: "intermediate",
+    id: "4a7b5ed8-6875-4ace-ab72-23f5edf251ec",
+    description:
+      'You follow through on commitments and make sure your team members do the same."',
+  },
+  "5424a2e5-38d4-4e1c-92ec-eaa84bda2a75": {
+    competency: "ensuresAccountability",
+    expectation: "advanced",
+    id: "5424a2e5-38d4-4e1c-92ec-eaa84bda2a75",
+    description:
+      '"• You consistently establish clear responsibilities and processes for monitoring work, evaluating feedback, and measuring results.',
+  },
+  "8cddaa67-3d0e-4555-8dac-ac0f86dcea07": {
+    competency: "ensuresAccountability",
+    expectation: "advanced",
+    id: "8cddaa67-3d0e-4555-8dac-ac0f86dcea07",
+    description:
+      "You are adept at adjusting plans as needed, effectively managing obstacles and holding both yourself and others accountable.",
+  },
+  "a0795969-7588-4a41-a442-e07cf12b446d": {
+    competency: "ensuresAccountability",
+    expectation: "advanced",
+    id: "a0795969-7588-4a41-a442-e07cf12b446d",
+    description:
+      'You have successfully fostered a culture of responsibility, where team members feel empowered and accountable for their roles and outcomes."',
+  },
+  "09ec8c26-9c8f-4eb5-88f6-c97ff2668469": {
+    competency: "ensuresAccountability",
+    expectation: "expert",
+    id: "09ec8c26-9c8f-4eb5-88f6-c97ff2668469",
+    description:
+      '"• You work with others outside your team to determine clear performance standards and establish processes for monitoring work, evaluating feedback, and measuring results.',
+  },
+  "cf97301d-ba8d-4ee3-b0a4-8d7f84366932": {
+    competency: "ensuresAccountability",
+    expectation: "expert",
+    id: "cf97301d-ba8d-4ee3-b0a4-8d7f84366932",
+    description:
+      "You have developed the strategic insight needed to recognize when plans need to be adapted and you re-orient everyone to ensure a high level of accountability and progress is maintained.",
+  },
+  "bd96fd5f-140b-4063-ad60-d2320d9cea21": {
+    competency: "ensuresAccountability",
+    expectation: "expert",
+    id: "bd96fd5f-140b-4063-ad60-d2320d9cea21",
+    description:
+      'You have built a strong culture of accountability within your team, with members demonstrating a sense of ownership and responsibility for their roles and results."',
+  },
+  "33af770e-933e-4f28-88c0-8588ae331155": {
+    competency: "ensuresAccountability",
+    expectation: "leading expert",
+    id: "33af770e-933e-4f28-88c0-8588ae331155",
+    description:
+      '"• You are a process expert in ensuring your team members have articulated the goals / outcomes for which they demonstrate a strong sense of ownership.',
+  },
+  "91e327b9-bd8c-4a20-949a-311ebaaa4105": {
+    competency: "ensuresAccountability",
+    expectation: "leading expert",
+    id: "91e327b9-bd8c-4a20-949a-311ebaaa4105",
+    description:
+      "You have designed feedback loops that scale across the organization to help ensure delivery of intended outcomes and foster a culture of continuous learning & improvement.",
+  },
+  "fd0a34fa-0ddf-49ed-9952-0f032f7f60c6": {
+    competency: "ensuresAccountability",
+    expectation: "leading expert",
+    id: "fd0a34fa-0ddf-49ed-9952-0f032f7f60c6",
+    description:
+      "You lead by example, modeling accountability and challenging your colleagues and teams with whom you work across & outside the organization to uphold their responsibilities and adapt as necessary to achieve the desired outcomes.",
+  },
+  "adfaf687-f9a5-40b8-9326-d9274658b13a": {
+    competency: "ensuresAccountability",
+    expectation: "leading expert",
+    id: "adfaf687-f9a5-40b8-9326-d9274658b13a",
+    description:
+      'You have mastered the art of strategically observing patterns, identifying areas for enhancement, and swiftly implementing alternative approaches which enables you to adjust plans with precision and uphold accountability."',
   },
 } as const;
 

@@ -47,28 +47,27 @@ export const Competencies = [
       "Collaborates effectively with a diverse team, fostering a supportive environment where everyone feels valued, empowered, and free to contribute towards a shared goal.",
     track: "Core",
   },
-  // TODO: generate these
-  // {
-  //   key: "coachingAndFeedback",
-  //   title: "Coaching and Feedback",
-  //   description:
-  //     "Demonstrates honesty and integrity in developing others by consistently listening, providing constructive feedback, and remaining open-minded.",
-  //   track: "Management",
-  // },
-  // {
-  //   key: "navigateChangeAndDifficulty",
-  //   title: "Navigate Change and Difficulty",
-  //   description:
-  //     "Demonstrates emotional intelligence in leading self and others through change and facilitating difficult conversations with empathy.",
-  //   track: "Management",
-  // },
-  // {
-  //   key: "ensuresAccountability",
-  //   title: "Ensures Accountability",
-  //   description:
-  //     "Prioritizes achievement of intended outcomes, holding both self and others accountable. Fosters a culture where team members feel ownership of their roles and responsibilities.",
-  //   track: "Management",
-  // },
+  {
+    key: "coachingAndFeedback",
+    title: "Coaching and Feedback",
+    description:
+      "Demonstrates honesty and integrity in developing others by consistently listening, providing constructive feedback, and remaining open-minded.",
+    track: "Management",
+  },
+  {
+    key: "navigateChangeAndDifficulty",
+    title: "Navigate Change and Difficulty",
+    description:
+      "Demonstrates emotional intelligence in leading self and others through change and facilitating difficult conversations with empathy.",
+    track: "Management",
+  },
+  {
+    key: "ensuresAccountability",
+    title: "Ensures Accountability",
+    description:
+      "Prioritizes achievement of intended outcomes, holding both self and others accountable. Fosters a culture where team members feel ownership of their roles and responsibilities.",
+    track: "Management",
+  },
   {
     key: "domainExpertise",
     title: "Domain Expertise",
