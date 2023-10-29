@@ -12,10 +12,10 @@ export const jumpToNextExpectation = (skill: Skill, rev?: boolean) => {
   const expectation = Matrix.byExpectation.find(
     ({ key }) => key === expectationKey,
   );
-  const competency = expectation?.competencies?.find(
+  const competency = expectation?.competencies.find(
     ({ key }) => key === skill.competency,
   );
-  return competency?.skills?.[0].id;
+  return competency?.skills[0].id;
 };
 
 export const jumpToNextCompetency = (skill: Skill, rev?: boolean) => {
@@ -27,10 +27,10 @@ export const jumpToNextCompetency = (skill: Skill, rev?: boolean) => {
   const competency = Matrix.byCompetency.find(
     ({ key }) => key === competencyKey,
   );
-  const expectation = competency?.expectations?.find(
+  const expectation = competency?.expectations.find(
     ({ key }) => key === skill.expectation,
   );
-  return expectation?.skills?.[0].id;
+  return expectation?.skills[0].id;
 };
 
 // Since we are grouping by expectation first and then by competency, we need to

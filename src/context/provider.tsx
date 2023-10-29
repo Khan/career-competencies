@@ -7,7 +7,9 @@ import { getData, setData } from "./local-storage";
 
 export const DataProvider = ({ children }: { children: ReactNode }) => {
   const [userCompetencies, dispatch] = useReducer(dataReducer, getData());
-  useEffect(() => setData(userCompetencies), [userCompetencies]);
+  useEffect(() => {
+    setData(userCompetencies);
+  }, [userCompetencies]);
 
   return (
     <DataContext.Provider value={userCompetencies}>

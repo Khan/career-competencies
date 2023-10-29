@@ -4,7 +4,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:import/recommended",
-    "plugin:@typescript-eslint/recommended-type-checked",
+    "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
@@ -32,8 +32,9 @@ module.exports = {
       { allow: ["**/assets/*", "**/node_modules/**"] },
     ],
     // for some reason I keep getting error re: strictNullChecks despite strict
-    // mode being enabled in tsconfig.json; disabling this rule for now
+    // mode being enabled in tsconfig.json; disabling these rules for now
     "@typescript-eslint/prefer-nullish-coalescing": "off",
+    "@typescript-eslint/no-unnecessary-condition": "off",
     // map href => to for react-router-dom
     "jsx-a11y/anchor-is-valid": [
       "error",

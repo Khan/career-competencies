@@ -43,7 +43,7 @@ export const dataReducer = (state: State, action: Action): State => {
         skills: {
           ...state.skills,
           [data.id]: {
-            ...state.skills?.[data.id],
+            ...state.skills[data.id],
             checked: false,
           },
         },

@@ -22,7 +22,7 @@ export const Prompt = () => {
         label={"I can demonstrate this skill: " + skill.description}
         checked={skillState.checked ?? false}
         style={{ paddingTop: "2em" }}
-        handleClick={() =>
+        handleClick={() => {
           dispatch(
             skillState.checked
               ? {
@@ -33,8 +33,8 @@ export const Prompt = () => {
                   type: "checked",
                   data: skill,
                 },
-          )
-        }
+          );
+        }}
       />
       {skillState.checked && (
         <Examples skillId={skill.id} examples={skillState.examples ?? {}} />

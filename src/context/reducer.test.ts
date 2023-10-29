@@ -23,7 +23,11 @@ describe("dataReducer", () => {
     },
   };
 
-  initialState.skills![SkillIDs[0]] = {
+  if (!initialState.skills) {
+    expect.unreachable("skills should not be undefined");
+  }
+
+  initialState.skills[SkillIDs[0]] = {
     checked: true,
     examples: {
       [crypto.randomUUID()]: "example 1",
@@ -37,7 +41,7 @@ describe("dataReducer", () => {
       data: Skills[SkillIDs[1] as keyof typeof Skills],
     };
     const newState = dataReducer(initialState, action);
-    expect(newState?.skills?.[action.data.id]).toEqual({
+    expect(newState.skills?.[action.data.id]).toEqual({
       checked: true,
       examples: [],
       ...action.data,
@@ -57,7 +61,7 @@ describe("dataReducer", () => {
     };
     const newState = dataReducer(initialState, action);
     expect(
-      newState?.skills?.[action.data.skillId].examples?.[
+      newState.skills?.[action.data.skillId].examples?.[
         action.data.example.key
       ],
     ).toEqual(action.data.example.value);

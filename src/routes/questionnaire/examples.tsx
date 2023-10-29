@@ -43,14 +43,16 @@ export const Examples = ({
           <li key={key}>
             <input
               type="text"
-              ref={(node) => setMap(key, node)}
+              ref={(node) => {
+                setMap(key, node);
+              }}
               value={exampleInputs[key as UUID]}
               placeholder={
                 i === 0
                   ? "I demonstrate this skill by..."
                   : "Add another example"
               }
-              onChange={(e) =>
+              onChange={(e) => {
                 dispatch({
                   type: "example-updated",
                   data: {
@@ -60,8 +62,8 @@ export const Examples = ({
                       value: e.target.value,
                     },
                   },
-                })
-              }
+                });
+              }}
             />
           </li>
         ))}
