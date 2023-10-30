@@ -10,6 +10,6 @@ details[open] > summary {
   text-decoration: underline;
 }
 
-details > *:not(summary) {
+details[id^="competency-"] > *:not(summary) {
   margin-left: 0.5em;
 }

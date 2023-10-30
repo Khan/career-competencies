@@ -6,7 +6,7 @@ export const CompetencyItem = ({
 }: {
   competency: (typeof Matrix.byCompetency)[number];
 }) => (
-  <details key={competency.key}>
+  <details key={competency.key} id={"competency-" + competency.key}>
     <summary>{competency.title}</summary>
     {competency.expectations.map((expectation) => (
       <ExpectationItem key={expectation.key} expectation={expectation} />
