@@ -3,7 +3,7 @@ import type { Skill } from "../../data";
 import { useData, useDataDispatch } from "../../context";
 
 import "./questionnaire.css";
-import { Checkbox } from "../../components";
+import { Checkbox } from "./checkbox";
 import { Examples } from "./examples";
 import { SkillNav } from "./skill-nav";
 

@@ -4,12 +4,19 @@ import {
   createHashRouter,
   redirect,
 } from "react-router-dom";
-import { Nav, Overview, Result, Prompt, questionnaireLoader } from "./routes";
+import {
+  Root,
+  Overview,
+  Result,
+  Prompt,
+  questionnaireLoader,
+  Profile,
+} from "./routes";
 
 const router = createHashRouter([
   {
     path: "/",
-    element: <Nav />,
+    element: <Root />,
     children: [
       {
         path: "",
@@ -22,6 +29,10 @@ const router = createHashRouter([
       {
         path: "result",
         element: <Result />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
       },
       {
         path: "questionnaire",

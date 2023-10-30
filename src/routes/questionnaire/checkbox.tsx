@@ -2,8 +2,14 @@ import circleIcon from "@phosphor-icons/core/regular/circle.svg";
 import circleCheckedIcon from "@phosphor-icons/core/regular/check-circle.svg";
 import { PhosphorIcon } from "@khanacademy/wonder-blocks-icon";
 import Clickable from "@khanacademy/wonder-blocks-clickable";
-import type { CheckboxProps } from "./types";
 import "./checkbox.css";
+
+export interface CheckboxProps {
+  label: string;
+  checked: boolean;
+  handleClick: () => void;
+  [x: string | number | symbol]: unknown;
+}
 
 export const Checkbox = ({
   label,

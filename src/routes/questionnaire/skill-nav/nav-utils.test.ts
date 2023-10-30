@@ -4,7 +4,7 @@ import {
   jumpToNextCompetency,
   jumpToNextExpectation,
 } from "./nav-utils";
-import { Skills } from "../../data";
+import { Skills } from "../../../data";
 
 // ensure nav functions don't return undefined and loop both directions
 describe.each(Object.values(Skills))(`for skill`, (skill) => {

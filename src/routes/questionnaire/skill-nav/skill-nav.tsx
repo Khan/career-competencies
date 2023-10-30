@@ -1,7 +1,7 @@
-import { NavArrow } from "../../components";
-import { Competencies } from "../../data";
-import type { Skill } from "../../data";
-import { toTitleCase } from "../../utils";
+import { Competencies } from "../../../data";
+import type { Skill } from "../../../data";
+import { toTitleCase } from "../../../utils";
+import { NavArrow } from "./nav-arrow";
 import {
   jumpToNextCompetency,
   jumpToNextExpectation,

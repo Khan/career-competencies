@@ -1,3 +1,2 @@
-export const Result = () => {
-  return <>:)</>;
-};
+// stub
+export const Result = () => <>🙂</>;

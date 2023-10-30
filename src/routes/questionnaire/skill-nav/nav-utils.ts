@@ -1,6 +1,6 @@
-import type { Skill } from "../../data";
-import { Competencies, Expectations, Matrix } from "../../data";
-import { loopIndex } from "../../utils";
+import type { Skill } from "../../../data";
+import { Competencies, Expectations, Matrix } from "../../../data";
+import { loopIndex } from "../../../utils";
 
 const increment = <T>(start: T, arr: readonly T[], rev?: boolean) => {
   const index = arr.indexOf(start) + (rev ? -1 : 1);
