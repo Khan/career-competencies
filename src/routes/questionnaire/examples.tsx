@@ -10,7 +10,7 @@ export const Examples = ({
   examples: Record<UUID, string>;
 }) => {
   const dispatch = useDataDispatch();
-  const itemsRef = useRef<Map<string, HTMLInputElement>>();
+  const itemsRef = useRef<Map<string, HTMLTextAreaElement>>();
 
   const getMap = () => {
     if (!itemsRef.current) {
@@ -20,7 +20,7 @@ export const Examples = ({
     return itemsRef.current;
   };
 
-  const setMap = (example: string, node: HTMLInputElement | null) => {
+  const setMap = (example: string, node: HTMLTextAreaElement | null) => {
     const map = getMap();
     if (node) {
       map.set(example, node);
@@ -41,8 +41,7 @@ export const Examples = ({
       <ul>
         {Object.keys(exampleInputs).map((key, i) => (
           <li key={key} id={key}>
-            <input
-              type="text"
+            <textarea
               ref={(node) => {
                 setMap(key, node);
               }}

@@ -60,6 +60,24 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+textarea {
+  width: inherit;
+  min-height: 200px;
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: inherit;
+  resize: vertical;
+}
+textarea:focus,
+textarea:hover {
+  outline-color: #535bf2 !important;
+  outline: 2px solid #535bf2 !important;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
