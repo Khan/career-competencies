@@ -27,6 +27,10 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+    ],
     "import/no-internal-modules": [
       "error",
       { allow: ["**/assets/*", "**/node_modules/**"] },

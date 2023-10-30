@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@khanacademy/wonder-blocks-clickable": "^4.0.8",
+    "@khanacademy/wonder-blocks-core": "^6.3.0",
     "@khanacademy/wonder-blocks-icon": "^2.2.0",
     "@phosphor-icons/core": "^2.0.2",
     "react": "^18.2.0",

@@ -40,7 +40,7 @@ export const Examples = ({
       </span>
       <ul>
         {Object.keys(exampleInputs).map((key, i) => (
-          <li key={key}>
+          <li key={key} id={key}>
             <input
               type="text"
               ref={(node) => {
