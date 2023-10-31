@@ -1,14 +1,14 @@
 import type { Competencies, Expectations } from ".";
 import type { UUID } from "./types";
 
-export interface SkillSchema {
+export interface Skill {
   competency: (typeof Competencies)[number]["key"];
   expectation: (typeof Expectations)[number]["key"];
   id: UUID;
   description: string;
 }
 
-export const Skills = {
+export const Skills: Record<UUID, Skill> = {
   "6a4d548a-4243-46b4-85e2-fffe85174be6": {
     competency: "deliveringResultsForImpact",
     expectation: "beginner",
@@ -1434,8 +1434,3 @@ export const Skills = {
       "You have mastered the art of strategically observing patterns, identifying areas for enhancement, and swiftly implementing alternative approaches which enables you to adjust plans with precision and uphold accountability.",
   },
 } as const;
-
-// This allows us to extract a literal union type from fields in the array,
-//   and if there's an issue, Typescript will complain when it's consumed
-//   instead of here.
-export type Skill = SkillSchema & (typeof Skills)[keyof typeof Skills];

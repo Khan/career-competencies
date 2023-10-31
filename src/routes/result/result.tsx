@@ -3,10 +3,10 @@ import { calculateCompetencies, getLevel } from "../../data";
 import "./result.css";
 
 export const Result = () => {
-  const { skills } = useData();
+  const data = useData();
 
   const [competencyExpectations, overallExpectation] =
-    calculateCompetencies(skills);
+    calculateCompetencies(data);
 
   return (
     <table id="result-table">

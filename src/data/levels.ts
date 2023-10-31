@@ -1,7 +1,7 @@
 import type { Track } from "./tracks";
 
 // These may need to be split into levels for different tracks in the future
-const EngineeringLevels: Record<number, string> = {
+const EngineeringLevels = {
   0: "None",
   1: "SRP I",
   2: "SRP II",
@@ -15,4 +15,4 @@ const EngineeringLevels: Record<number, string> = {
 // if accessor number higher than levels, return highest level
 // eventually, we will have a switch case for each track
 export const getLevel = (accessor: number, _track?: Track): string =>
-  EngineeringLevels[accessor > 7 ? 7 : accessor];
+  (EngineeringLevels as Record<number, string>)[accessor > 7 ? 7 : accessor];

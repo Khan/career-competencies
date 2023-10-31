@@ -3,8 +3,9 @@ import { Matrix, Expectations } from ".";
 import type { useData } from "../context";
 
 export function calculateCompetencies(
-  skills: ReturnType<typeof useData>["skills"],
+  data: ReturnType<typeof useData>,
 ): [[Competency, Expectation][], Expectation] {
+  const { skills } = data;
   const competencyExpectation: [Competency, Expectation][] =
     Matrix.byCompetency.map((competency) => {
       let expectationMet = Expectations[0]; // none
@@ -86,5 +87,6 @@ export function calculateCompetencies(
     }
     return expectationMet;
   };
+
   return [competencyExpectation, overallExpectation()];
 }
