@@ -62,7 +62,7 @@ button:focus-visible {
 
 textarea {
   min-height: 5em;
-  height: auto;
+  height: 1em;
   width: 50%;
   border-radius: 0.2em;
   border: none;

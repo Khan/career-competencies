@@ -14,7 +14,7 @@ export const Examples = ({
 
   // Used to automatically resize the textarea to fit the content
   const onChangeResizeHandler = function (textArea: HTMLTextAreaElement) {
-    textArea.style.height = "30px";
+    textArea.style.height = "1em";
     textArea.style.height = `${textArea.scrollHeight}px`;
   };
 
