@@ -75,8 +75,8 @@ textarea {
 }
 textarea:focus,
 textarea:hover {
-  outline-color: #535bf2 !important;
-  outline: 2px solid #535bf2 !important;
+  outline-color: #535bf2;
+  outline: 2px solid #535bf2;
 }
 
 @media (prefers-color-scheme: light) {
@@ -86,6 +86,10 @@ textarea:hover {
   }
   a:hover {
     color: #747bff;
+  }
+  textarea:focus,
+  textarea:hover {
+    outline-color: #747bff;
   }
   button {
     background-color: #f9f9f9;
