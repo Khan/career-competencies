@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useDataDispatch } from "../../context";
 import type { UUID } from "../../data";
 
@@ -11,6 +11,23 @@ export const Examples = ({
 }) => {
   const dispatch = useDataDispatch();
   const itemsRef = useRef<Map<string, HTMLTextAreaElement>>();
+
+  // Used to automatically resize the textarea to fit the content
+  const onChangeResizeHandler = function (textArea: HTMLTextAreaElement) {
+    textArea.style.height = "30px";
+    textArea.style.height = `${textArea.scrollHeight}px`;
+  };
+
+  useEffect(() => {
+    // set the initial height of the textareas to
+    // the height of their content on initial render
+    const map = getMap();
+    map.forEach((node) => {
+      if (node.textContent) {
+        onChangeResizeHandler(node);
+      }
+    });
+  }, []);
 
   const getMap = () => {
     if (!itemsRef.current) {
@@ -52,6 +69,7 @@ export const Examples = ({
                   : "Add another example"
               }
               onChange={(e) => {
+                onChangeResizeHandler(e.target);
                 dispatch({
                   type: "example-updated",
                   data: {
