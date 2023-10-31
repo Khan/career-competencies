@@ -1,0 +1,11 @@
+#result-table {
+    width: 100%;
+}
+
+#result-table thead {
+    text-decoration: underline;
+}
+
+#result-table th {
+    text-align: left;
+}
