@@ -629,7 +629,7 @@ export const Skills = {
     expectation: "advanced",
     id: "e91bd070-0d1b-43ac-b58a-c8f2ad7ce64d",
     description:
-      "You explain concepts clearly and with patience, and adjust your communication based on the audience. You offer help when asked, but you also know when to step back and let others work things out on their own.",
+      "You are adept at giving and receiving constructive feedback and you both give and receive feedback clearly and with empathy.",
   },
   "033e0ccc-1f86-47e6-9e62-0b81c4bd6c6e": {
     competency: "communicationAndEngagement",
