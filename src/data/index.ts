@@ -3,6 +3,7 @@
  *  new competencie that may vary by role, track, and level.
  */
 export { Competencies, type Competency } from "./competencies";
+export { Expectations, type Expectation } from "./expectations";
 export { Skills, type Skill } from "./skills";
 export { Matrix } from "./matrix";
 
@@ -10,12 +11,6 @@ export { Matrix } from "./matrix";
  *  While we don't need Levels and Tracks to calculate the skills matrix, we
  *  are going to record the data in anticipation of future use per above note
  */
-export {
-  Expectations,
-  ExpectationLevelMap,
-  Levels,
-  type Level,
-  type Expectation,
-} from "./levels";
+export { Levels } from "./levels";
 export { Tracks, type Track } from "./tracks";
 export { type UUID } from "./types";

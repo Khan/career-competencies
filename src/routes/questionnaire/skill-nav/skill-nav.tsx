@@ -1,6 +1,5 @@
-import { Competencies } from "../../../data";
+import { Matrix } from "../../../data";
 import type { Skill } from "../../../data";
-import { toTitleCase } from "../../../utils";
 import { NavArrow } from "./nav-arrow";
 import {
   jumpToNextCompetency,
@@ -9,11 +8,23 @@ import {
 } from "./nav-utils";
 
 export const SkillNav = ({ skill }: { skill: Skill }) => {
-  const competency = Competencies.find((c) => c.key === skill.competency);
+  const competency = Matrix.byCompetency.find(
+    (c) => c.key === skill.competency,
+  );
 
   if (!competency) {
     throw new Error(
       `Could not find competency for skill ${skill.id}: (${skill.description})`,
+    );
+  }
+
+  const expectation = competency.expectations.find(
+    (e) => e.key === skill.expectation,
+  );
+
+  if (!expectation) {
+    throw new Error(
+      `Could not find expectation for skill ${skill.id}: (${skill.description})`,
     );
   }
 
@@ -28,7 +39,7 @@ export const SkillNav = ({ skill }: { skill: Skill }) => {
           label={"previous expectation"}
           path={basePath + jumpToNextExpectation(skill, true)}
         />
-        <h3>{toTitleCase(skill.expectation)}</h3>
+        <h3>{expectation?.title}</h3>
         <NavArrow
           direction="right"
           double
