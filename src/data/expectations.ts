@@ -2,7 +2,7 @@ export interface Expectation {
   readonly key: string;
   readonly title: string;
   readonly partial: boolean;
-  readonly value: number;
+  readonly value: number; // coincides with the index
 }
 
 export const Expectations: readonly Expectation[] = [
