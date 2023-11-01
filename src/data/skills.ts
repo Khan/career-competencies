@@ -1,14 +1,14 @@
-import type { Competencies, Expectation } from ".";
+import type { Competencies, Expectations } from ".";
 import type { UUID } from "./types";
 
-export interface SkillSchema {
+export interface Skill {
   competency: (typeof Competencies)[number]["key"];
-  expectation: Expectation;
+  expectation: (typeof Expectations)[number]["key"];
   id: UUID;
   description: string;
 }
 
-export const Skills = {
+export const Skills: Record<UUID, Skill> = {
   "6a4d548a-4243-46b4-85e2-fffe85174be6": {
     competency: "deliveringResultsForImpact",
     expectation: "beginner",
@@ -169,28 +169,28 @@ export const Skills = {
 
   "c75edc33-4e86-45a7-ab2e-d922e6bdf03f": {
     competency: "deliveringResultsForImpact",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "c75edc33-4e86-45a7-ab2e-d922e6bdf03f",
     description:
       "You help all of Khan Academy get unstuck, finding ways to make the company more effective at delivering impact. ",
   },
   "da278638-ed8d-495d-826e-d86fca229f3c": {
     competency: "deliveringResultsForImpact",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "da278638-ed8d-495d-826e-d86fca229f3c",
     description:
       "You create and develop solutions that set industry standards, thereby significantly enhancing our organizational impact.",
   },
   "421f9532-a70e-4ee0-9c45-f278c8f2c9b3": {
     competency: "deliveringResultsForImpact",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "421f9532-a70e-4ee0-9c45-f278c8f2c9b3",
     description:
       "By focusing on the most important goals of Khan Academy, you contribute in a way that exceeds the immediate challenges and leads to meaningful, far-reaching results in our goals and KPIs.",
   },
   "0b6368f7-5a21-4658-9168-cab781dba853": {
     competency: "deliveringResultsForImpact",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "0b6368f7-5a21-4658-9168-cab781dba853",
     description:
       "You craft systems that operate efficiently, without a need for your involvement, throughout Khan Academy and beyond.",
@@ -318,28 +318,28 @@ export const Skills = {
 
   "49ec3d97-bd66-4a47-bed9-df521331e774": {
     competency: "domainExpertise",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "49ec3d97-bd66-4a47-bed9-df521331e774",
     description:
       "Your contributions to the field (e.g. talks, open source projects, research papers) have meaningful impact beyond Khan Academy.",
   },
   "8889b829-f8ef-430b-90c5-eed068081e70": {
     competency: "domainExpertise",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "8889b829-f8ef-430b-90c5-eed068081e70",
     description:
       "Your expertise helps Khan Academy exceed its KPIs and organization priorities.",
   },
   "2f6d04ec-6155-4aac-86fe-d3d3ace19c3e": {
     competency: "domainExpertise",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "2f6d04ec-6155-4aac-86fe-d3d3ace19c3e",
     description:
       "You use your expertise to come up with solutions to long-standing or seemingly intractable problems in the broader industry.",
   },
   "ef2b3abc-05aa-4583-9723-51b54eeae206": {
     competency: "domainExpertise",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "ef2b3abc-05aa-4583-9723-51b54eeae206",
     description:
       "You contribute to the advancement of the wider industry in your domain.",
@@ -505,28 +505,28 @@ export const Skills = {
 
   "3c645519-d852-49b9-bbf4-2da68d30edf1": {
     competency: "problemSolving",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "3c645519-d852-49b9-bbf4-2da68d30edf1",
     description:
       "You create solutions that get near-unanimous acceptance and adoption from critical stakeholders, and which provide continual benefit with little support or overhead for a very long lifespan.",
   },
   "16a921d7-65d8-4740-a84e-a9e4ccceed63": {
     competency: "problemSolving",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "16a921d7-65d8-4740-a84e-a9e4ccceed63",
     description:
       "You identify barriers that are slowing down teams and initiatives at Khan Academy and create practical solutions to increase efficiency.",
   },
   "4cdf67e6-394a-4d08-95f3-ccd35407e7be": {
     competency: "problemSolving",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "4cdf67e6-394a-4d08-95f3-ccd35407e7be",
     description:
       "You are a leader who provides actionable direction to teams in the face of complex problems involving multiple stakeholders.",
   },
   "0a5df981-c5ef-452e-8468-a426e2abaee1": {
     competency: "problemSolving",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "0a5df981-c5ef-452e-8468-a426e2abaee1",
     description: "You create new solutions that solve industry-wide problems.",
   },
@@ -684,28 +684,28 @@ export const Skills = {
 
   "38287017-82cc-45f0-a357-334306f9fafb": {
     competency: "communicationAndEngagement",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "38287017-82cc-45f0-a357-334306f9fafb",
     description:
       "You've made significant changes to how Khan Academy handles documentation, facilitation, or collaboration that has improved the functioning of the entire organization.",
   },
   "324f76b9-4926-484e-9682-d0739612e048": {
     competency: "communicationAndEngagement",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "324f76b9-4926-484e-9682-d0739612e048",
     description:
       "You create spaces and channels that improve cross-team and inter-departmental communication at Khan Academy.",
   },
   "a677a230-6dbf-4be6-be1b-b68f89f34ca0": {
     competency: "communicationAndEngagement",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "a677a230-6dbf-4be6-be1b-b68f89f34ca0",
     description:
       "Others turn to you for advice on delivering difficult feedback and communicating effectively, recognizing your expertise in engaging communication.",
   },
   "8c33e863-2949-41eb-9819-deba3c683bf2": {
     competency: "communicationAndEngagement",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "8c33e863-2949-41eb-9819-deba3c683bf2",
     description:
       "Your presence and example has a strong, positive influence on Khan Academy's working environment.",
@@ -850,28 +850,28 @@ export const Skills = {
 
   "ff91ea5e-756b-4a10-968e-c1d1a04887c4": {
     competency: "leadership",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "ff91ea5e-756b-4a10-968e-c1d1a04887c4",
     description:
       "You have successfully changed how your department functions in a way that has moved both Khan Academy forward and established a best practice in the industry.",
   },
   "d231788f-6efd-4145-8f43-140624a6b083": {
     competency: "leadership",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "d231788f-6efd-4145-8f43-140624a6b083",
     description:
       "You are accountable for the success of your department with respect to attracting top talent and ensuring the strength of our brand.",
   },
   "c484d51d-622c-41fe-972d-83e77ec7b24b": {
     competency: "leadership",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "c484d51d-622c-41fe-972d-83e77ec7b24b",
     description:
       "You regularly represent Khan Academy publicly (e.g. via blog posts, speaking, etc.).",
   },
   "02f42e0c-93d8-4db2-be10-d938268b7f14": {
     competency: "leadership",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "02f42e0c-93d8-4db2-be10-d938268b7f14",
     description:
       "Your leadership is cited by many on the team as a significantly positive aspect of working at Khan Academy.",
@@ -1023,28 +1023,28 @@ export const Skills = {
 
   "089bf7a2-3948-4098-ba22-266dbf887a63": {
     competency: "inclusiveCollaboration",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "089bf7a2-3948-4098-ba22-266dbf887a63",
     description:
       "You champion diversity, equity, and inclusion, influencing others to do the same and fostering a culture of inclusive collaboration across the organization.",
   },
   "c324771d-3ebc-42a9-88f5-87c4ffa19da9": {
     competency: "inclusiveCollaboration",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "c324771d-3ebc-42a9-88f5-87c4ffa19da9",
     description:
       "You make the business case for diversity and inclusion, helping the organization understand its impact on our shared goals.",
   },
   "e80d370d-9ef4-4946-9b78-13b72808b372": {
     competency: "inclusiveCollaboration",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "e80d370d-9ef4-4946-9b78-13b72808b372",
     description:
       "You establish accountability measures for progress in diversity, equity, and inclusion within the organization.",
   },
   "dad2cd99-a02b-49af-aa8a-3b6d54ab3073": {
     competency: "inclusiveCollaboration",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "dad2cd99-a02b-49af-aa8a-3b6d54ab3073",
     description:
       "You recognize and reward inclusive behavior across the organization, promoting a culture where everyone can shine.",
@@ -1156,21 +1156,21 @@ export const Skills = {
   },
   "6944a1bb-b20a-4d3b-81be-fe1ec2af5987": {
     competency: "coachingAndFeedback",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "6944a1bb-b20a-4d3b-81be-fe1ec2af5987",
     description:
       "You are widely recognized as an example of excellence in setting the highest standard for integrating feedback and coaching into your team's development. Your approach has become the benchmark for others to follow.",
   },
   "012843b5-16a4-4491-ae5e-42b9ec1890d4": {
     competency: "coachingAndFeedback",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "012843b5-16a4-4491-ae5e-42b9ec1890d4",
     description:
       "Your influence extends throughout the organization as you architect a culture where feedback is not just a process but a fundamental part of growth. You've expanded the horizons of employees across the company, fostering an environment of continuous learning, personal development, and delivery of high-quality work.",
   },
   "efb7caa7-7ae9-43a8-ab9e-ba6f5d338bc3": {
     competency: "coachingAndFeedback",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "efb7caa7-7ae9-43a8-ab9e-ba6f5d338bc3",
     description:
       "Your dedication to fostering open dialogue, active listening, and continual skill development has transformed your team into a high-performing group that excels in collaboration within and across departments.",
@@ -1180,7 +1180,7 @@ export const Skills = {
     expectation: "beginner",
     id: "d0e15605-82d4-4c73-bcae-69d8a6a7a09f",
     description:
-      '"• You are beginning to demonstrate self-awareness regarding your own emotional state when confronted with change and/or challenging situations, and are showing the early signs of using what you know to better inform your future actions.',
+      "You are beginning to demonstrate self-awareness regarding your own emotional state when confronted with change and/or challenging situations, and are showing the early signs of using what you know to better inform your future actions.",
   },
   "741f4ed8-86a6-4a51-874b-f441b86fa3a5": {
     competency: "navigateChangeAndDifficulty",
@@ -1194,14 +1194,14 @@ export const Skills = {
     expectation: "beginner",
     id: "22b55bf4-bfa5-480d-a89b-c2bfdb9ec5ba",
     description:
-      'You understand that change can be difficult for people to accept and are beginning to identify ways to more readily adapt to change yourself."',
+      "You understand that change can be difficult for people to accept and are beginning to identify ways to more readily adapt to change yourself.",
   },
   "0e199882-5e0e-4c87-8b6d-834d8148698d": {
     competency: "navigateChangeAndDifficulty",
     expectation: "intermediate",
     id: "0e199882-5e0e-4c87-8b6d-834d8148698d",
     description:
-      '"• You demonstrate the ability to stay calm in uncomfortable situations and are beginning to develop self-regulation by choosing to manage your emotions in the moment.',
+      "You demonstrate the ability to stay calm in uncomfortable situations and are beginning to develop self-regulation by choosing to manage your emotions in the moment.",
   },
   "fadeb057-d0ad-4b9b-9c32-c18a47c3c910": {
     competency: "navigateChangeAndDifficulty",
@@ -1222,14 +1222,14 @@ export const Skills = {
     expectation: "intermediate",
     id: "41c5fc1d-040e-4d6a-aed8-ca1b520a0023",
     description:
-      'You can foresee the impacts of change on your team and stakeholders, and have started to develop strategies to manage it effectively."',
+      "You can foresee the impacts of change on your team and stakeholders, and have started to develop strategies to manage it effectively.",
   },
   "cf1acea7-20eb-49e5-9d08-a91f9d08abb3": {
     competency: "navigateChangeAndDifficulty",
     expectation: "advanced",
     id: "cf1acea7-20eb-49e5-9d08-a91f9d08abb3",
     description:
-      '"• You consistently reflect on your behaviors, thoughts, and feelings when encountering change and/or challenging situations.',
+      "You consistently reflect on your behaviors, thoughts, and feelings when encountering change and/or challenging situations.",
   },
   "d75af8af-3c3f-4913-bd87-673024fcac44": {
     competency: "navigateChangeAndDifficulty",
@@ -1250,14 +1250,14 @@ export const Skills = {
     expectation: "advanced",
     id: "0da0de80-3369-4140-b884-7474935dff71",
     description:
-      'You empathize with your team by understanding the impact of decsions on them, and you guide them through change by addressing their concerns and resistance effectively."',
+      "You empathize with your team by understanding the impact of decsions on them, and you guide them through change by addressing their concerns and resistance effectively.",
   },
   "4437efc8-2097-4edc-9f08-1fcc388f0fe5": {
     competency: "navigateChangeAndDifficulty",
     expectation: "expert",
     id: "4437efc8-2097-4edc-9f08-1fcc388f0fe5",
     description:
-      '"• Self-awareness, self-regulation and empathy are now hallmarks of your leadership style, helping you navigate complex emotions and facilitate effective communication during challenging conversations.',
+      "Self-awareness, self-regulation and empathy are now hallmarks of your leadership style, helping you navigate complex emotions and facilitate effective communication during challenging conversations.",
   },
   "8eda6299-5ee1-480c-97de-479da58a5039": {
     competency: "navigateChangeAndDifficulty",
@@ -1278,42 +1278,42 @@ export const Skills = {
     expectation: "expert",
     id: "5c70ed81-c584-48a7-865d-06cc6b1f4860",
     description:
-      'You have become adept at managing change, using your understanding of its impacts to guide others through it, and addressing resistance in a productive and empathetic manner."',
+      "You have become adept at managing change, using your understanding of its impacts to guide others through it, and addressing resistance in a productive and empathetic manner.",
   },
   "0b2170c0-07f8-4435-a347-48d986fed1e0": {
     competency: "navigateChangeAndDifficulty",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "0b2170c0-07f8-4435-a347-48d986fed1e0",
     description:
-      '"• You have earned respect across the organization for your mastery of emotional intelligence in your conversations as a tool to manage complex emotions and facilitate effective and empathetic communication.',
+      "You have earned respect across the organization for your mastery of emotional intelligence in your conversations as a tool to manage complex emotions and facilitate effective and empathetic communication.",
   },
   "67a61645-73fe-4d3b-80cd-ddd811a20c2f": {
     competency: "navigateChangeAndDifficulty",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "67a61645-73fe-4d3b-80cd-ddd811a20c2f",
     description:
       "Your ability to make and stand by tough decisions, along with your transparency about the rationale, has earned you the respect of your team and the organization.",
   },
   "b054c1ae-1f74-4655-a862-d4453604a985": {
     competency: "navigateChangeAndDifficulty",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "b054c1ae-1f74-4655-a862-d4453604a985",
     description:
       "Your opinion and feedback is often sought by others when important decisions are being evaluated because of your mastery of 'disagree and commit'.",
   },
   "ddb5ac8d-85ed-476b-b63a-216cbaeaae9b": {
     competency: "navigateChangeAndDifficulty",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "ddb5ac8d-85ed-476b-b63a-216cbaeaae9b",
     description:
-      'Your understanding of change and its impacts has made you a guide for others in times of transformation, skillfully managing resistance and fostering acceptance and adoption to deliver maximum benefit."',
+      "Your understanding of change and its impacts has made you a guide for others in times of transformation, skillfully managing resistance and fostering acceptance and adoption to deliver maximum benefit.",
   },
   "b9ecd5b3-e0ca-49e4-81d2-cc4f976e8b89": {
     competency: "ensuresAccountability",
     expectation: "beginner",
     id: "b9ecd5b3-e0ca-49e4-81d2-cc4f976e8b89",
     description:
-      '"• You recognize the importance of meeting intended outcomes and are learning to monitor progress towards these goals.',
+      "You recognize the importance of meeting intended outcomes and are learning to monitor progress towards these goals.",
   },
   "a890bc48-2de7-4cc3-a316-d16fed3ea44e": {
     competency: "ensuresAccountability",
@@ -1333,14 +1333,14 @@ export const Skills = {
     competency: "ensuresAccountability",
     expectation: "beginner",
     id: "553b8ae6-0647-4327-bf56-3faf868961b1",
-    description: 'You follow through on commitments."',
+    description: "You follow through on commitments.",
   },
   "cabb1536-83d7-4ca5-8c4e-2ad506e9ed2e": {
     competency: "ensuresAccountability",
     expectation: "intermediate",
     id: "cabb1536-83d7-4ca5-8c4e-2ad506e9ed2e",
     description:
-      "\"• You have begun implementing periodic review & feedback of your team's work to help measure progress against key milestones.",
+      "You have begun implementing periodic review & feedback of your team's work to help measure progress against key milestones.",
   },
   "8977f95f-6144-4e2f-b217-75d1e35490fa": {
     competency: "ensuresAccountability",
@@ -1361,14 +1361,14 @@ export const Skills = {
     expectation: "intermediate",
     id: "4a7b5ed8-6875-4ace-ab72-23f5edf251ec",
     description:
-      'You follow through on commitments and make sure your team members do the same."',
+      "You follow through on commitments and make sure your team members do the same.",
   },
   "5424a2e5-38d4-4e1c-92ec-eaa84bda2a75": {
     competency: "ensuresAccountability",
     expectation: "advanced",
     id: "5424a2e5-38d4-4e1c-92ec-eaa84bda2a75",
     description:
-      '"• You consistently establish clear responsibilities and processes for monitoring work, evaluating feedback, and measuring results.',
+      "You consistently establish clear responsibilities and processes for monitoring work, evaluating feedback, and measuring results.",
   },
   "8cddaa67-3d0e-4555-8dac-ac0f86dcea07": {
     competency: "ensuresAccountability",
@@ -1382,14 +1382,14 @@ export const Skills = {
     expectation: "advanced",
     id: "a0795969-7588-4a41-a442-e07cf12b446d",
     description:
-      'You have successfully fostered a culture of responsibility, where team members feel empowered and accountable for their roles and outcomes."',
+      "You have successfully fostered a culture of responsibility, where team members feel empowered and accountable for their roles and outcomes.",
   },
   "09ec8c26-9c8f-4eb5-88f6-c97ff2668469": {
     competency: "ensuresAccountability",
     expectation: "expert",
     id: "09ec8c26-9c8f-4eb5-88f6-c97ff2668469",
     description:
-      '"• You work with others outside your team to determine clear performance standards and establish processes for monitoring work, evaluating feedback, and measuring results.',
+      "You work with others outside your team to determine clear performance standards and establish processes for monitoring work, evaluating feedback, and measuring results.",
   },
   "cf97301d-ba8d-4ee3-b0a4-8d7f84366932": {
     competency: "ensuresAccountability",
@@ -1403,39 +1403,34 @@ export const Skills = {
     expectation: "expert",
     id: "bd96fd5f-140b-4063-ad60-d2320d9cea21",
     description:
-      'You have built a strong culture of accountability within your team, with members demonstrating a sense of ownership and responsibility for their roles and results."',
+      "You have built a strong culture of accountability within your team, with members demonstrating a sense of ownership and responsibility for their roles and results.",
   },
   "33af770e-933e-4f28-88c0-8588ae331155": {
     competency: "ensuresAccountability",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "33af770e-933e-4f28-88c0-8588ae331155",
     description:
-      '"• You are a process expert in ensuring your team members have articulated the goals / outcomes for which they demonstrate a strong sense of ownership.',
+      "You are a process expert in ensuring your team members have articulated the goals / outcomes for which they demonstrate a strong sense of ownership.",
   },
   "91e327b9-bd8c-4a20-949a-311ebaaa4105": {
     competency: "ensuresAccountability",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "91e327b9-bd8c-4a20-949a-311ebaaa4105",
     description:
       "You have designed feedback loops that scale across the organization to help ensure delivery of intended outcomes and foster a culture of continuous learning & improvement.",
   },
   "fd0a34fa-0ddf-49ed-9952-0f032f7f60c6": {
     competency: "ensuresAccountability",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "fd0a34fa-0ddf-49ed-9952-0f032f7f60c6",
     description:
       "You lead by example, modeling accountability and challenging your colleagues and teams with whom you work across & outside the organization to uphold their responsibilities and adapt as necessary to achieve the desired outcomes.",
   },
   "adfaf687-f9a5-40b8-9326-d9274658b13a": {
     competency: "ensuresAccountability",
-    expectation: "leading expert",
+    expectation: "leadingExpert",
     id: "adfaf687-f9a5-40b8-9326-d9274658b13a",
     description:
-      'You have mastered the art of strategically observing patterns, identifying areas for enhancement, and swiftly implementing alternative approaches which enables you to adjust plans with precision and uphold accountability."',
+      "You have mastered the art of strategically observing patterns, identifying areas for enhancement, and swiftly implementing alternative approaches which enables you to adjust plans with precision and uphold accountability.",
   },
 } as const;
-
-// This allows us to extract a literal union type from fields in the array,
-//   and if there's an issue, Typescript will complain when it's consumed
-//   instead of here.
-export type Skill = SkillSchema & (typeof Skills)[keyof typeof Skills];

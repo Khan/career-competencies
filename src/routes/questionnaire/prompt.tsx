@@ -12,7 +12,10 @@ export const Prompt = () => {
   const { skills } = useData();
   const dispatch = useDataDispatch();
 
-  const skillState = skills?.[skill.id] ?? {};
+  const skillState = skills?.[skill.id] ?? {
+    checked: false,
+    examples: {},
+  };
 
   return (
     <div id="prompt">
