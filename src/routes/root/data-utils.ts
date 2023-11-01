@@ -32,7 +32,7 @@ export const importData = (
   }
 };
 
-export const handleExport = (data: State) => {
+export const exportData = (data: State) => {
   // We want to export the file with the user's name
   // so that managers can easily differentiate between
   // multiple files

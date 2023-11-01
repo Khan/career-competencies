@@ -9,7 +9,7 @@ import { useData, useDataDispatch } from "../../context";
 import "./data-functions.css";
 
 import type { State } from "../../context";
-import { handleExport, importData } from "./data-utils.ts";
+import { exportData, importData } from "./data-utils.ts";
 
 const DataFunctions = () => {
   const data: State = useData();
@@ -27,7 +27,7 @@ const DataFunctions = () => {
         role="button"
         aria-label="Export"
         onClick={() => {
-          handleExport(data);
+          exportData(data);
         }}
         id="export"
       >
