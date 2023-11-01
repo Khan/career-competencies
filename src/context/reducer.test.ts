@@ -1,4 +1,4 @@
-import { expect, describe, it } from "vitest";
+import { expect, describe, it } from "@jest/globals";
 import { dataReducer } from "./reducer";
 import type { Action, State } from "./types";
 import type { UUID } from "../data";
@@ -28,7 +28,7 @@ describe("dataReducer", () => {
   };
 
   if (!initialState.skills) {
-    expect.unreachable("skills should not be undefined");
+    throw new Error("skills should not be undefined");
   }
 
   initialState.skills[SkillIDs[0]] = {
@@ -82,7 +82,7 @@ describe("dataReducer", () => {
     };
     const newState = dataReducer(initialState, action);
     if (!newState.skills || !initialState.skills) {
-      expect.unreachable("skills should not be undefined");
+      throw new Error("skills should not be undefined");
     }
     expect(newState.skills[SkillIDs[0]].checked).toBe(false);
     expect(newState.skills[SkillIDs[0]].examples).toEqual(
