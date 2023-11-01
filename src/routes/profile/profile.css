@@ -1,0 +1,23 @@
+#profile-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 5em;
+    row-gap: 1em;
+}
+
+.form__input {
+    width: 100%;
+    min-height: 3em;
+}
+
+#form__save-button {
+    background-color: blue;
+    text-align: center;
+    margin-top: 1em;
+}
+
+input[type="email"]::placeholder {
+    /* Firefox, Chrome, Opera */
+    text-align: center;
+}
