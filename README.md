@@ -73,6 +73,22 @@ then run
 bun ./bun.lockb
 ```
 
+### Notes on testing
+
+`bun test` runs bun's own testing suite, but they have packaged their types in a way that is difficult to consume. Instead...
+
+**When writing tests, import from `@jest/globals`.**
+
+When we use a test suite other than `bun:test`, bun replaces the import with one mapped to its own functions anyway.
+
+`jest` is the best-supported test suite, so we'll use that.
+
+> [!IMPORTANT]\
+> If you unexpectedly hit a `Reference Error`, consult the below links to determine if the function you are trying to use is currently supported by `bun`.
+>
+> - [Here is a list of supported matchers in a `bun` tutorial.](https://bun.sh/docs/test/writing#matchers)
+> - [Here is an issue showing currently mapped functions from various test suites.](https://github.com/oven-sh/bun/issues/1825)
+
 ## Github Actions
 
 - [CI](.github/workflows/ci.yml): Runs on every PR and pushes to `main`. Tests, lints, and builds to ensure that the code is ready to be merged and/or deployed.
