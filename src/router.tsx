@@ -12,11 +12,13 @@ import {
   questionnaireLoader,
   Profile,
 } from "./routes";
+import { loader } from "./loader";
 
 const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
+    loader,
     children: [
       {
         path: "",
