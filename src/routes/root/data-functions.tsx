@@ -6,9 +6,10 @@ import "./data-functions.css";
 import { useData, useDataDispatch } from "../../context";
 import { useRef } from "react";
 import type { State } from "../../context";
+import { handleExport, importData } from "./data-utils.ts";
 
-export const DataFunctions = () => {
-  const data: unknown = useData();
+const DataFunctions = () => {
+  const data: State = useData();
   const inputReference = useRef<HTMLInputElement>(null);
   const dispatch = useDataDispatch();
 
@@ -17,57 +18,14 @@ export const DataFunctions = () => {
     inputReference.current?.click();
   };
 
-  const importData = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      // Set up the FileReader to read the file
-      // parse the JSON and dispatch the data
-      const reader = new FileReader();
-      reader.onload = (e: ProgressEvent<FileReader>) => {
-        const result = e.target?.result;
-        if (typeof result === "string") {
-          try {
-            const parsed = JSON.parse(result) as State;
-            if (parsed) {
-              dispatch({
-                type: "data-imported",
-                data: parsed,
-              });
-            }
-          } catch (error) {
-            console.error("Failed to parse JSON:", error);
-          }
-        }
-      };
-      reader.onerror = () => {
-        console.error("Failed to read file:", reader.error);
-      };
-      reader.readAsText(file);
-    }
-  };
-
-  const handleExport = () => {
-    // TODO: We could export this with the user's name
-    // so that it's easier for managers to find the right file
-    const fileName = "competencies.json";
-
-    // Create a blob link, download it, and remove the link
-    const blob = new Blob([JSON.stringify(data)], { type: "text/json" });
-    const jsonURL = window.URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    document.body.appendChild(link);
-    link.href = jsonURL;
-    link.setAttribute("download", fileName);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <div id="data-fns-wrapper">
       <Clickable
         role="button"
         aria-label="Export"
-        onClick={handleExport}
+        onClick={() => {
+          handleExport(data);
+        }}
         id="export"
       >
         {() => <PhosphorIcon icon={Export} size="large" />}
@@ -80,7 +38,16 @@ export const DataFunctions = () => {
       >
         {() => <PhosphorIcon icon={DownloadSimple} size="large" />}
       </Clickable>
-      <input type="file" hidden ref={inputReference} onChange={importData} />
+      <input
+        type="file"
+        aria-label="File Upload"
+        hidden
+        ref={inputReference}
+        onChange={(e) => {
+          importData(e, dispatch);
+        }}
+      />
     </div>
   );
 };
+export default DataFunctions;
