@@ -8,7 +8,7 @@ import {
 } from "./nav-utils";
 
 export const SkillNav = ({ skill }: { skill: Skill }) => {
-  const competency = Matrix.byCompetency.find(
+  const competency = Matrix().byCompetency.find(
     (c) => c.key === skill.competency,
   );
 

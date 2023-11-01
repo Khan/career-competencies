@@ -7,7 +7,7 @@ export function calculateCompetencies(
 ): [[Competency, Expectation][], Expectation] {
   const { skills } = data;
   const competencyExpectation: [Competency, Expectation][] =
-    Matrix.byCompetency.map((competency) => {
+    Matrix().byCompetency.map((competency) => {
       let expectationMet = Expectations[0]; // none
       for (const expectation of competency.expectations) {
         const totalSkills = expectation.skills.length;
@@ -54,7 +54,7 @@ export function calculateCompetencies(
         continue;
       }
 
-      const totalCompetencies = Matrix.byCompetency.length;
+      const totalCompetencies = Matrix().byCompetency.length;
       const competenciesAtExpectation = competencyExpectation.filter(
         ([_, e]) => e.value >= expectation.value,
       ).length;
