@@ -5,7 +5,7 @@
   justify-content: space-around;
   width: 6em;
 }
-button:hover span {
+#data-fns-wrapper button:hover span {
   display: flex;
   flex-direction: row;
   float: right;
@@ -14,7 +14,7 @@ button:hover span {
   color: #535bf2;
 }
 @media (prefers-color-scheme: light) {
-  button:hover span {
+  #data-fns-wrapper button:hover span {
     color: #747bff;
   }
 }
