@@ -1,6 +1,6 @@
 import "./profile.css";
-import type { Track, Level } from "../../data";
-import { Levels, Tracks } from "../../data";
+import type { Track } from "../../data";
+import { EngineeringLevels, Tracks } from "../../data";
 import { useData, useDataDispatch } from "../../context";
 import Select from "react-select";
 
@@ -13,10 +13,10 @@ export const Profile = () => {
   function chooseTrack(track: Track) {
     return { value: track, label: track };
   }
-
-  const levelOptions: { value: Level; label: Level }[] =
-    Levels.map(chooseLevel);
-  function chooseLevel(level: Level) {
+  const levels = Object.values(EngineeringLevels)
+  const levelOptions: { value: string; label: string }[] =
+      levels.map(chooseLevel);
+  function chooseLevel(level: string) {
     return { value: level, label: level };
   }
 
@@ -34,7 +34,7 @@ export const Profile = () => {
   const [lastName, setLastName] = useState(lastNameState ?? "");
   const [email, setEmail] = useState(emailState ?? "");
   const [track, setTrack] = useState<Track|undefined>(trackState);
-  const [declaredLevel, setDeclaredLevel] = useState<Level|undefined>(levelState);
+  const [declaredLevel, setDeclaredLevel] = useState<string|undefined>(levelState);
 
   const profileData: User = {
     firstName,

@@ -1,7 +1,7 @@
 import type { Track } from "./tracks";
 
 // These may need to be split into levels for different tracks in the future
-const EngineeringLevels = {
+export const EngineeringLevels = {
   0: "None",
   1: "SRP I",
   2: "SRP II",
