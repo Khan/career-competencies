@@ -46,7 +46,7 @@ export const Examples = ({
               ref={(node) => {
                 setMap(key, node);
               }}
-              value={exampleInputs[key as UUID]}
+              value={exampleInputs[key]}
               placeholder={
                 i === 0
                   ? "I demonstrate this skill by..."
@@ -58,7 +58,7 @@ export const Examples = ({
                   data: {
                     skillId,
                     example: {
-                      key: key as UUID,
+                      key: key,
                       value: e.target.value,
                     },
                   },

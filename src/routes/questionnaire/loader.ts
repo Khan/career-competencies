@@ -6,6 +6,6 @@ export const loader: LoaderFunction = ({ params }) => {
     return redirect(`/questionnaire/skill/${Object.keys(Skills)[0]}`);
   }
   return {
-    skill: Skills[params.id as keyof typeof Skills],
+    skill: Skills[params.id],
   };
 };

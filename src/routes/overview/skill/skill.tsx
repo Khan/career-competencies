@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { NavLink } from "react-router-dom";
-import type { Skill, UUID } from "../../../data";
+import type { Skill } from "../../../data";
 import { useData } from "../../../context";
 import { Examples, ExpandToggle, examplesId } from "./examples";
 import { Status } from "./status-indicator";
@@ -13,10 +13,7 @@ export const SkillItem = ({ skill }: { skill: Skill }) => {
   const { skills } = useData();
   const skillData = skills?.[skill.id];
   const checked = !!skillData?.checked;
-  const exampleEntries = Object.entries(skillData?.examples ?? {}) as [
-    UUID,
-    string,
-  ][];
+  const exampleEntries = Object.entries(skillData?.examples ?? {});
   const hasExamples = exampleEntries.length > 0;
 
   return (
