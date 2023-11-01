@@ -6,7 +6,6 @@ import Select from "react-select";
 
 import { useState } from "react";
 import type { User } from "../../context";
-// import {useLoaderData} from "react-router-dom";
 
 export const Profile = () => {
   const trackOptions: { value: Track; label: Track }[] =
