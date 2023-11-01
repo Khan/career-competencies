@@ -4,7 +4,7 @@ import "./overview.css";
 
 export const Overview = () => (
   <span id="overview">
-    {Matrix("Software Engineer").byCompetency.map((competency) => (
+    {Matrix().byCompetency.map((competency) => (
       <CompetencyItem key={competency.key} competency={competency} />
     ))}
   </span>
