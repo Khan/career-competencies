@@ -32,8 +32,8 @@ export interface User {
   firstName: string;
   lastName: string;
   email: string;
-  track: Track;
-  declaredLevel: Level;
+  track?: Track;
+  declaredLevel?: Level;
 }
 export interface State {
   skills?: Record<UUID, { checked?: boolean; examples?: Record<UUID, string> }>;
