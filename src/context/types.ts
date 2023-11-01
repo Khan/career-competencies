@@ -28,7 +28,7 @@ export type Action =
   | UserDataUpdatedAction
   | ImportDataAction;
 
-interface User {
+export interface User {
   firstName: string;
   lastName: string;
   email: string;
