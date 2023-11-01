@@ -18,11 +18,10 @@ const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
-    loader,
     children: [
       {
         path: "",
-        loader: () => redirect("/overview"),
+        loader,
       },
       {
         path: "overview",
