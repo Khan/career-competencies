@@ -1,10 +1,13 @@
+import { useRef } from "react";
+import Clickable from "@khanacademy/wonder-blocks-clickable";
 import { PhosphorIcon } from "@khanacademy/wonder-blocks-icon";
+
 import Export from "@phosphor-icons/core/regular/export.svg";
 import DownloadSimple from "@phosphor-icons/core/regular/download-simple.svg";
-import Clickable from "@khanacademy/wonder-blocks-clickable";
-import "./data-functions.css";
+
 import { useData, useDataDispatch } from "../../context";
-import { useRef } from "react";
+import "./data-functions.css";
+
 import type { State } from "../../context";
 import { handleExport, importData } from "./data-utils.ts";
 
