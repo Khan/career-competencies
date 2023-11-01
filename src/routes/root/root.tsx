@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
 import { Nav } from "./nav";
-import { DataFunctions } from "./data-functions";
+import { Header } from "./header";
 
 export const Root = () => (
   <>
-    <DataFunctions />
+    <Header />
     <Outlet />
     <Nav />
   </>
