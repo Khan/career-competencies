@@ -1,4 +1,4 @@
-import type { Level, Skill, Track, UUID } from "../data";
+import type { Skill, Track, UUID } from "../data";
 
 interface SkillAction {
   type: "checked" | "unchecked";
@@ -33,9 +33,12 @@ export interface User {
   lastName: string;
   email: string;
   track?: Track;
-  declaredLevel?: Level;
+  declaredLevel: string;
 }
 export interface State {
-  skills?: Record<UUID, { checked?: boolean; examples?: Record<UUID, string> }>;
+  skills?: Record<
+    UUID,
+    Skill & { checked: boolean; examples: Record<UUID, string> }
+  >;
   user?: User;
 }

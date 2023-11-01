@@ -12,6 +12,7 @@ import {
   questionnaireLoader,
   Profile,
 } from "./routes";
+import { loader } from "./loader";
 
 const router = createHashRouter([
   {
@@ -20,7 +21,7 @@ const router = createHashRouter([
     children: [
       {
         path: "",
-        loader: () => redirect("/overview"),
+        loader,
       },
       {
         path: "overview",

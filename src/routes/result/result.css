@@ -1,0 +1,33 @@
+#result-table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+#result-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+#result-table thead,
+#result-table tfoot {
+  background-color: rgba(255, 255, 255, 0.13);
+}
+
+#result-table th {
+  text-align: left;
+  padding: 0.5em 1em;
+}
+
+#result-table td {
+  padding: 0.5em 1em;
+}
+
+@media (prefers-color-scheme: light) {
+  #result-table tbody tr:nth-child(even) {
+    background-color: #21354716;
+  }
+
+  #result-table thead,
+  #result-table tfoot {
+    background-color: #21354730;
+  }
+}

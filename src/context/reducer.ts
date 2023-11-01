@@ -39,7 +39,7 @@ export const dataReducer = (state: State, action: Action): State => {
     }
     // remove skill from state without losing examples
     case "unchecked": {
-      if (!state.skills?.[data.id] || !state.skills[data.id].checked) {
+      if (!state.skills?.[data.id]?.checked) {
         throw Error("Cannot uncheck unattained skill");
       }
       return {

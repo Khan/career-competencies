@@ -1,5 +1,5 @@
 import type { Skill } from "../../../data";
-import { Competencies, Expectations, Matrix } from "../../../data";
+import { Matrix } from "../../../data";
 import { loopIndex } from "../../../utils";
 
 const increment = <T>(start: T, arr: readonly T[], rev?: boolean) => {
@@ -8,7 +8,8 @@ const increment = <T>(start: T, arr: readonly T[], rev?: boolean) => {
 };
 
 export const jumpToNextExpectation = (skill: Skill, rev?: boolean) => {
-  const expectationKey = increment(skill.expectation, Expectations, rev);
+  const expectationKeys = Matrix.byExpectation.map(({ key }) => key);
+  const expectationKey = increment(skill.expectation, expectationKeys, rev);
   const expectation = Matrix.byExpectation.find(
     ({ key }) => key === expectationKey,
   );
@@ -19,11 +20,8 @@ export const jumpToNextExpectation = (skill: Skill, rev?: boolean) => {
 };
 
 export const jumpToNextCompetency = (skill: Skill, rev?: boolean) => {
-  const competencyKey = increment(
-    skill.competency,
-    Competencies.map(({ key }) => key),
-    rev,
-  );
+  const competencyKeys = Matrix.byCompetency.map(({ key }) => key);
+  const competencyKey = increment(skill.competency, competencyKeys, rev);
   const competency = Matrix.byCompetency.find(
     ({ key }) => key === competencyKey,
   );
