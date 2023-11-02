@@ -39,7 +39,7 @@ describe("nav-utils", () => {
           let nextSkill: keyof typeof Skills = skill.id;
           let iterations = 0;
           do {
-            nextSkill = getNextSkill(coreSkillsDict[nextSkill], rev);
+            nextSkill = getNextSkill(coreSkillsDict[nextSkill], "Core", rev);
             iterations++;
           } while (
             nextSkill !== skill.id &&
