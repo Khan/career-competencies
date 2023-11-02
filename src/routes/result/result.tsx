@@ -8,6 +8,11 @@ export const Result = () => {
   const [competencyExpectations, overallExpectation] =
     calculateCompetencies(data);
 
+  const levelMapping = getLevel(
+    overallExpectation.value,
+    data.user?.track ?? "Core",
+  );
+
   return (
     <table id="result-table">
       <thead>
@@ -26,13 +31,17 @@ export const Result = () => {
       </tbody>
       <tfoot>
         <tr>
-          <th>EXPECTATION</th>
+          <th>Overall Expectation</th>
           <td>{overallExpectation.title}</td>
         </tr>
-        <tr>
-          <th>LEVEL MAPPING</th>
-          <td>{getLevel(overallExpectation.value)}</td>
-        </tr>
+        {levelMapping && (
+          <tr>
+            <th>LEVEL MAPPING</th>
+            <td>
+              {getLevel(overallExpectation.value, data.user?.track ?? "Core")}
+            </td>
+          </tr>
+        )}
       </tfoot>
     </table>
   );
