@@ -5,7 +5,9 @@ import { Header } from "./header";
 export const Root = () => (
   <>
     <Header />
-    <Outlet />
+    <div className="contentContainer">
+      <Outlet />
+    </div>
     <Nav />
   </>
 );
