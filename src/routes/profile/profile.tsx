@@ -1,38 +1,40 @@
 import "./profile.css";
+import type { Track } from "../../data";
 import { Tracks } from "../../data";
 import { useData, useDataDispatch } from "../../context";
 
 import { useState } from "react";
 import type { ChangeEvent } from "react";
-import type { User } from "../../context";
 
 export const Profile = () => {
   const { user } = useData();
-
   const dispatch = useDataDispatch();
+
+  const orderedTracks = [...Tracks].sort((a: Track, b: Track) =>
+    a.title.localeCompare(b.title),
+  );
 
   const [firstName, setFirstName] = useState(user?.firstName ?? "");
   const [lastName, setLastName] = useState(user?.lastName ?? "");
   const [email, setEmail] = useState(user?.email ?? "");
-  const [track, setTrack] = useState<string>(user?.track?.key ?? Tracks[0].key);
+  const [track, setTrack] = useState<string>(user?.track?.key ?? "core");
   const [declaredLevel, setDeclaredLevel] = useState<string>(
     user?.declaredLevel ?? "",
   );
 
-  const profileData: User = {
-    firstName,
-    lastName,
-    email,
-    track: Tracks.find((t) => t.key === track),
-    declaredLevel,
-  };
-
   function handleSave() {
     dispatch({
       type: "user-data-updated",
-      data: profileData,
+      data: {
+        firstName,
+        lastName,
+        email,
+        track: Tracks.find((t) => t.key === track),
+        declaredLevel,
+      },
     });
   }
+
   return (
     <form onSubmit={handleSave} id="profile-form">
       <div className="">
@@ -89,7 +91,7 @@ export const Profile = () => {
           }}
           value={track}
         >
-          {Tracks.map((option) => (
+          {orderedTracks.map((option) => (
             <option key={option.key} value={option.key}>
               {option.title}
             </option>
