@@ -94,6 +94,7 @@ export const Profile = () => {
           onChange={(e: ChangeEvent<HTMLSelectElement>) => {
             setTrack(e.target.value as Track);
           }}
+          value={track}
         >
           {trackOptions.map((option) => (
             <option key={option.label}>{option.value}</option>
