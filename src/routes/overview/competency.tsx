@@ -1,10 +1,10 @@
-import type { Matrix } from "../../data";
+import type { MatrixCompetencyItem } from "../../data";
 import { ExpectationItem } from "./expectation";
 
 export const CompetencyItem = ({
   competency,
 }: {
-  competency: (typeof Matrix.byCompetency)[number];
+  competency: MatrixCompetencyItem;
 }) => (
   <details key={competency.key} id={"competency-" + competency.key}>
     <summary>{competency.title}</summary>

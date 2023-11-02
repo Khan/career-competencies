@@ -8,9 +8,9 @@ const increment = <T>(start: T, arr: readonly T[], rev?: boolean) => {
 };
 
 export const jumpToNextExpectation = (skill: Skill, rev?: boolean) => {
-  const expectationKeys = Matrix().byExpectation.map(({ key }) => key);
+  const expectationKeys = Matrix("Core").byExpectation.map(({ key }) => key);
   const expectationKey = increment(skill.expectation, expectationKeys, rev);
-  const expectation = Matrix().byExpectation.find(
+  const expectation = Matrix("Core").byExpectation.find(
     ({ key }) => key === expectationKey,
   );
   const competency = expectation?.competencies.find(
@@ -20,9 +20,9 @@ export const jumpToNextExpectation = (skill: Skill, rev?: boolean) => {
 };
 
 export const jumpToNextCompetency = (skill: Skill, rev?: boolean) => {
-  const competencyKeys = Matrix().byCompetency.map(({ key }) => key);
+  const competencyKeys = Matrix("Core").byCompetency.map(({ key }) => key);
   const competencyKey = increment(skill.competency, competencyKeys, rev);
-  const competency = Matrix().byCompetency.find(
+  const competency = Matrix("Core").byCompetency.find(
     ({ key }) => key === competencyKey,
   );
   const expectation = competency?.expectations.find(
@@ -35,8 +35,9 @@ export const jumpToNextCompetency = (skill: Skill, rev?: boolean) => {
 //   iterate to the next competency within the same expectation, or the next
 //   expectation if we are at the end of the competencies for the current
 //   expectation.
-const skillIdsByExpectation = Matrix().byExpectation.flatMap(({ competencies }) =>
-  competencies.flatMap(({ skills }) => skills.map(({ id }) => id)),
+const skillIdsByExpectation = Matrix("Core").byExpectation.flatMap(
+  ({ competencies }) =>
+    competencies.flatMap(({ skills }) => skills.map(({ id }) => id)),
 );
 export const getNextSkill = (skill: Skill, rev?: boolean) =>
   increment(skill.id, skillIdsByExpectation, rev);

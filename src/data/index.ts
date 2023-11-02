@@ -1,7 +1,11 @@
 export { Competencies, type Competency } from "./competencies";
 export { Expectations, type Expectation } from "./expectations";
 export { Skills, type Skill } from "./skills";
-export { Matrix } from "./matrix";
+export {
+  Matrix,
+  type MatrixCompetencyItem,
+  type MatrixExpectationItem,
+} from "./matrix";
 export { calculateCompetencies } from "./calculations";
 
 /*

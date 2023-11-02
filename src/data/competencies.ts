@@ -1,7 +1,7 @@
 import type { Track } from "./tracks";
 
 // Leaving the door open here to map to values and principles in the future.
-interface CompetencySchema {
+export interface Competency {
   readonly key: string;
   readonly title: string;
   readonly description: string;
@@ -11,7 +11,7 @@ interface CompetencySchema {
 }
 
 // Source: https://docs.google.com/spreadsheets/d/1_8FPu_7KaRFb_KqriiHgnP_1Oe43L-1Vr695fgqI3Po/edit?usp=sharing on 2023-10-27
-export const Competencies = [
+export const Competencies: readonly Competency[] = [
   {
     key: "deliveringResultsForImpact",
     title: "Delivering Results For Impact",
@@ -76,8 +76,3 @@ export const Competencies = [
     track: "Software Engineer",
   },
 ] as const;
-
-// This allows us to extract a literal union type from fields in the array,
-//   and if there's an issue, Typescript will complain when it's consumed
-//   instead of here.
-export type Competency = CompetencySchema & (typeof Competencies)[number];
