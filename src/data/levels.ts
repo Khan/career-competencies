@@ -1,18 +1,45 @@
 import type { Track } from "./tracks";
 
-// These may need to be split into levels for different tracks in the future
-export const EngineeringLevels = {
-  0: "None",
-  1: "SRP I",
-  2: "SRP II",
-  3: "LEC 1 (Senior 1)",
-  4: "LEC 1 (Senior 2)",
-  5: "LEC 2 (Staff/Architect)",
-  6: "LEC 2 (Senior Staff/Architect)",
-  7: "LEC X (Principal & Distinguished)",
-} as const;
+// index 0 is below Beginner expectation-- then it goes:
+// 1: Beginner, 2: Partial Intermediate, 3: Intermediate, 4: Partial Advanced, 5: Advanced, 6: Partial Expert, 7: Expert
+type TrackLevels = [
+  null,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+  string,
+];
 
 // if accessor number higher than levels, return highest level
-// eventually, we will have a switch case for each track
-export const getLevel = (accessor: number, _track?: Track): string =>
-  (EngineeringLevels as Record<number, string>)[accessor > 7 ? 7 : accessor];
+export const getLevel = (
+  expectationValue: number,
+  track: Track,
+): string | null => {
+  const accessor = expectationValue > 7 ? 7 : expectationValue;
+  return Levels(track, accessor);
+};
+
+// These may need to be split into levels for different tracks in the future
+const Levels = (track: Track, expectationValue: number): string | null => {
+  switch (track) {
+    // So far, we only have levels for one track: Software Engineer
+    case "Software Engineer":
+      return SoftwareEngineer[expectationValue];
+    default:
+      return null;
+  }
+};
+
+const SoftwareEngineer: TrackLevels = [
+  null,
+  "SRP I",
+  "SRP II",
+  "LEC 1 (Senior 1)",
+  "LEC 1 (Senior 2)",
+  "LEC 2 (Staff/Architect)",
+  "LEC 2 (Senior Staff/Architect)",
+  "LEC X (Principal & Distinguished)",
+];
