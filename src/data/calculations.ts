@@ -5,33 +5,34 @@ import type { useData } from "../context";
 export function calculateCompetencies(
   data: ReturnType<typeof useData>,
 ): [[Competency, Expectation][], Expectation] {
-  const { skills } = data;
-  const competencyExpectation: [Competency, Expectation][] =
-    Matrix().byCompetency.map((competency) => {
-      let expectationMet = Expectations[0]; // none
-      for (const expectation of competency.expectations) {
-        const totalSkills = expectation.skills.length;
-        const skillsMet = expectation.skills.filter(
-          (skill) => skills?.[skill.id]?.checked === true,
-        ).length;
-        switch (true) {
-          // completely meets expecation; move on to next expectation
-          case skillsMet === totalSkills:
-            expectationMet = expectation;
-            continue;
-          // partially meets expectation; add 1 to last expectation met to find partial
-          case skillsMet >= totalSkills / 2:
-            expectationMet =
-              expectationMet.value > 0
-                ? Expectations[expectationMet.value + 1]
-                : expectationMet;
-            break;
-          default:
-            break;
-        }
+  const { skills, user } = data;
+  const competencyExpectation: [Competency, Expectation][] = Matrix(
+    user?.track ?? "Core",
+  ).byCompetency.map((competency) => {
+    let expectationMet = Expectations[0]; // none
+    for (const expectation of competency.expectations) {
+      const totalSkills = expectation.skills.length;
+      const skillsMet = expectation.skills.filter(
+        (skill) => skills?.[skill.id]?.checked === true,
+      ).length;
+      switch (true) {
+        // completely meets expecation; move on to next expectation
+        case skillsMet === totalSkills:
+          expectationMet = expectation;
+          continue;
+        // partially meets expectation; add 1 to last expectation met to find partial
+        case skillsMet >= totalSkills / 2:
+          expectationMet =
+            expectationMet.value > 0
+              ? Expectations[expectationMet.value + 1]
+              : expectationMet;
+          break;
+        default:
+          break;
       }
-      return [competency, expectationMet];
-    });
+    }
+    return [competency, expectationMet];
+  });
 
   const overallExpectation = (): Expectation => {
     let expectationMet = Expectations[0]; // none
@@ -54,7 +55,8 @@ export function calculateCompetencies(
         continue;
       }
 
-      const totalCompetencies = Matrix().byCompetency.length;
+      const totalCompetencies = Matrix(user?.track ?? "Core").byCompetency
+        .length;
       const competenciesAtExpectation = competencyExpectation.filter(
         ([_, e]) => e.value >= expectation.value,
       ).length;

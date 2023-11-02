@@ -28,10 +28,10 @@ describe("nav-utils", () => {
   describe.each(coreSkillsList)(`for skill`, (skill) => {
     describe(`${skill.id}`, () => {
       it.each([true, false])("should jump to the next competency", (rev) => {
-        expect(jumpToNextCompetency(skill, rev)).not.toBeUndefined();
+        expect(jumpToNextCompetency(skill, "Core", rev)).not.toBeUndefined();
       });
       it.each([true, false])("should jump to the next expectation", (rev) => {
-        expect(jumpToNextExpectation(skill, rev)).not.toBeUndefined();
+        expect(jumpToNextExpectation(skill, "Core", rev)).not.toBeUndefined();
       });
       it.each([true, false])(
         "should get next skill until it returns to the original skill",

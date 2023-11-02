@@ -6,7 +6,7 @@ import type { MatrixCompetencyItem, MatrixExpectationItem } from "./matrix";
 describe("Matrix function", () => {
   it('should filter competencies and expectations by "Core" track', () => {
     const track = "Core";
-    const result = Matrix("Core");
+    const result = Matrix(track);
 
     expect(result).toHaveProperty("byCompetency");
     expect(result).toHaveProperty("byExpectation");
