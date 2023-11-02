@@ -33,7 +33,7 @@ export interface User {
   lastName: string;
   email: string;
   track?: Track;
-  declaredLevel?: string;
+  declaredLevel: string | null;
 }
 export interface State {
   skills?: Record<

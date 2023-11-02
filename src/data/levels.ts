@@ -33,7 +33,7 @@ const Levels = (track: Track, expectationValue: number): string | null => {
   }
 };
 
-const SoftwareEngineer: TrackLevels = [
+export const SoftwareEngineer: TrackLevels = [
   null,
   "SRP I",
   "SRP II",

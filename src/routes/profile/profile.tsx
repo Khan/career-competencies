@@ -1,6 +1,6 @@
 import "./profile.css";
 import type { Track } from "../../data";
-import { EngineeringLevels, Tracks } from "../../data";
+import { SoftwareEngineer, Tracks } from "../../data";
 import { useData, useDataDispatch } from "../../context";
 import Select from "react-select";
 
@@ -13,10 +13,10 @@ export const Profile = () => {
   function chooseTrack(track: Track) {
     return { value: track, label: track };
   }
-  const levels = Object.values(EngineeringLevels)
-  const levelOptions: { value: string; label: string }[] =
-      levels.map(chooseLevel);
-  function chooseLevel(level: string) {
+
+  const levelOptions: { value: string | null; label: string | null }[] =
+    SoftwareEngineer.map(chooseLevel);
+  function chooseLevel(level: string | null) {
     return { value: level, label: level };
   }
 
@@ -26,15 +26,15 @@ export const Profile = () => {
   const lastNameState = user?.lastName;
   const emailState = user?.email;
   const trackState = user?.track;
-  const levelState = user?.declaredLevel;
+  const levelState = user?.declaredLevel ?? null;
 
   const dispatch = useDataDispatch();
 
   const [firstName, setFirstName] = useState(firstNameState ?? "");
   const [lastName, setLastName] = useState(lastNameState ?? "");
   const [email, setEmail] = useState(emailState ?? "");
-  const [track, setTrack] = useState<Track|undefined>(trackState);
-  const [declaredLevel, setDeclaredLevel] = useState<string|undefined>(levelState);
+  const [track, setTrack] = useState<Track | undefined>(trackState);
+  const [declaredLevel, setDeclaredLevel] = useState<string | null>(levelState);
 
   const profileData: User = {
     firstName,
