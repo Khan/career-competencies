@@ -97,7 +97,7 @@ describe("dataReducer", () => {
         firstName: "Test",
         lastName: "Testmond",
         email: "test@example.com",
-        track: getTrack("engineeringManager"),
+        track: getTrack("engManagement"),
         declaredLevel: "LEC X (Principal & Distinguished)",
       },
     };
