@@ -42,7 +42,7 @@ export const Profile = () => {
   }
   return (
     <form onSubmit={handleSave} id="profile-form">
-      <div>
+      <div className="">
         <label className="form__label" htmlFor="firstName">
           First Name
         </label>

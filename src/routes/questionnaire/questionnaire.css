@@ -8,10 +8,6 @@
   text-align: center;
 }
 
-#prompt {
-  padding-top: 1rem;
-}
-
 #examples {
   display: contents;
 }

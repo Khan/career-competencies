@@ -23,33 +23,35 @@ const DataFunctions = () => {
 
   return (
     <div id="data-fns-wrapper">
-      <Clickable
-        role="button"
-        aria-label="Export"
-        onClick={() => {
-          exportData(data);
-        }}
-        id="export"
-      >
-        {() => <PhosphorIcon icon={Export} size="large" />}
-      </Clickable>
-      <Clickable
-        role="button"
-        aria-label="Import"
-        onClick={handleImport}
-        id="import"
-      >
-        {() => <PhosphorIcon icon={DownloadSimple} size="large" />}
-      </Clickable>
-      <input
-        type="file"
-        aria-label="File Upload"
-        hidden
-        ref={inputReference}
-        onChange={(e) => {
-          importData(e, dispatch);
-        }}
-      />
+      <div id="data-fns">
+        <Clickable
+          role="button"
+          aria-label="Export"
+          onClick={() => {
+            exportData(data);
+          }}
+          id="export"
+        >
+          {() => <PhosphorIcon icon={Export} size="large" />}
+        </Clickable>
+        <Clickable
+          role="button"
+          aria-label="Import"
+          onClick={handleImport}
+          id="import"
+        >
+          {() => <PhosphorIcon icon={DownloadSimple} size="large" />}
+        </Clickable>
+        <input
+          type="file"
+          aria-label="File Upload"
+          hidden
+          ref={inputReference}
+          onChange={(e) => {
+            importData(e, dispatch);
+          }}
+        />
+      </div>
     </div>
   );
 };
