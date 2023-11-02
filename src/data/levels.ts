@@ -1,38 +1,18 @@
-export const Expectations = [
-  "beginner",
-  "intermediate",
-  "advanced",
-  "expert",
-  "leading expert",
-] as const;
-export type Expectation = (typeof Expectations)[number];
+import type { Track } from "./tracks";
 
 // These may need to be split into levels for different tracks in the future
-export const Levels = [
-  "SRP I",
-  "LEC 1 (Senior 1)",
-  "LEC 2 (Staff/Architect)",
-  "LEC X (Principal & Distinguished)",
-  "SRP II",
-  "LEC 1 (Senior 2)",
-  "LEC 2 (Senior Staff/Architect)",
-] as const;
-export type Level = (typeof Levels)[number];
-
-export const ExpectationLevelMap: {
-  [key in Exclude<Expectation, "leading expert">]: Level;
-} & {
-  partial: {
-    [key in Exclude<Expectation, "leading expert" | "beginner">]: Level;
-  };
-} = {
-  beginner: "SRP I",
-  intermediate: "LEC 1 (Senior 1)",
-  advanced: "LEC 2 (Staff/Architect)",
-  expert: "LEC X (Principal & Distinguished)",
-  partial: {
-    intermediate: "SRP II",
-    advanced: "LEC 1 (Senior 2)",
-    expert: "LEC 2 (Senior Staff/Architect)",
-  },
+const EngineeringLevels = {
+  0: "None",
+  1: "SRP I",
+  2: "SRP II",
+  3: "LEC 1 (Senior 1)",
+  4: "LEC 1 (Senior 2)",
+  5: "LEC 2 (Staff/Architect)",
+  6: "LEC 2 (Senior Staff/Architect)",
+  7: "LEC X (Principal & Distinguished)",
 } as const;
+
+// if accessor number higher than levels, return highest level
+// eventually, we will have a switch case for each track
+export const getLevel = (accessor: number, _track?: Track): string =>
+  (EngineeringLevels as Record<number, string>)[accessor > 7 ? 7 : accessor];

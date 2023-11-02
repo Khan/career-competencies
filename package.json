@@ -23,12 +23,12 @@
     "react-router-dom": "^6.17.0"
   },
   "devDependencies": {
+    "@jest/globals": "^29.7.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
-    "bun-types": "^1.0.7",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-typescript": "^3.6.1",
@@ -39,8 +39,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.3",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5",
-    "vitest": "^0.34.6"
+    "vite": "^4.4.5"
   },
   "packageManager": "bun@1.0.6"
 }

@@ -1,4 +1,4 @@
-import { expect, describe, it } from "vitest";
+import { expect, describe, it } from "@jest/globals";
 import { dataReducer } from "./reducer";
 import type { Action, State } from "./types";
 import type { UUID } from "../data";
@@ -19,12 +19,16 @@ describe("dataReducer", () => {
       "1-1-1-1-1": {
         checked: false,
         examples: {},
+        competency: "deliveringResultsForImpact",
+        expectation: "beginner",
+        id: "1-1-1-1-1",
+        description: "description 1",
       },
     },
   };
 
   if (!initialState.skills) {
-    expect.unreachable("skills should not be undefined");
+    throw new Error("skills should not be undefined");
   }
 
   initialState.skills[SkillIDs[0]] = {
@@ -33,12 +37,16 @@ describe("dataReducer", () => {
       [crypto.randomUUID()]: "example 1",
       [crypto.randomUUID()]: "example 2",
     },
+    competency: "deliveringResultsForImpact",
+    expectation: "beginner",
+    id: "1-1-1-1-1",
+    description: "description 1",
   };
 
   it("should add a skill to state", () => {
     const action: Action = {
       type: "checked",
-      data: Skills[SkillIDs[1] as keyof typeof Skills],
+      data: Skills[SkillIDs[1]],
     };
     const newState = dataReducer(initialState, action);
     expect(newState.skills?.[action.data.id]).toEqual({
@@ -70,11 +78,11 @@ describe("dataReducer", () => {
   it("should remove a skill from state without losing examples", () => {
     const action: Action = {
       type: "unchecked",
-      data: Skills[SkillIDs[0] as keyof typeof Skills],
+      data: Skills[SkillIDs[0]],
     };
     const newState = dataReducer(initialState, action);
     if (!newState.skills || !initialState.skills) {
-      expect.unreachable("skills should not be undefined");
+      throw new Error("skills should not be undefined");
     }
     expect(newState.skills[SkillIDs[0]].checked).toBe(false);
     expect(newState.skills[SkillIDs[0]].examples).toEqual(
@@ -112,6 +120,10 @@ describe("dataReducer", () => {
           "1-2-3-4-5": {
             checked: false,
             examples: {},
+            competency: "deliveringResultsForImpact",
+            expectation: "beginner",
+            id: "1-1-1-1-1",
+            description: "description 1",
           },
           "5-4-3-2-1": {
             checked: true,
@@ -119,12 +131,20 @@ describe("dataReducer", () => {
               [crypto.randomUUID()]: "example 1",
               [crypto.randomUUID()]: "example 2",
             },
+            competency: "deliveringResultsForImpact",
+            expectation: "beginner",
+            id: "1-1-1-1-1",
+            description: "description 1",
           },
           "6-7-8-9-0": {
             checked: true,
             examples: {
               [crypto.randomUUID()]: "example 3",
             },
+            competency: "deliveringResultsForImpact",
+            expectation: "beginner",
+            id: "1-1-1-1-1",
+            description: "description 1",
           },
         },
       },
@@ -144,7 +164,7 @@ describe("dataReducer", () => {
   it("should throw an error when unchecking an unattained skill", () => {
     const action: Action = {
       type: "unchecked",
-      data: Skills[SkillIDs[3] as keyof typeof Skills],
+      data: Skills[SkillIDs[3]],
     };
     expect(() => dataReducer(initialState, action)).toThrow(
       "Cannot uncheck unattained skill",

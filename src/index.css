@@ -60,6 +60,25 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+textarea {
+  min-height: 5em;
+  height: 1em;
+  width: 50%;
+  border-radius: 0.2em;
+  border: none;
+  padding: 0.6em;
+  font-size: 0.8em;
+  font-weight: 400;
+  font-family: inherit;
+  resize: none;
+  overflow: hidden;
+}
+textarea:focus,
+textarea:hover {
+  outline-color: #535bf2;
+  outline: 2px solid #535bf2;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -68,7 +87,14 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
+  textarea:focus,
+  textarea:hover {
+    outline-color: #747bff;
+  }
   button {
     background-color: #f9f9f9;
+  }
+  textarea {
+    background-color: #f0efef;
   }
 }
