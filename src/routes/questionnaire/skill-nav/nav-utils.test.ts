@@ -5,11 +5,11 @@ import {
   jumpToNextExpectation,
 } from "./nav-utils";
 import type { Skill, UUID } from "../../../data";
-import { Competencies, Skills } from "../../../data";
+import { Competencies, Skills, getTrack } from "../../../data";
 
 describe("nav-utils", () => {
   const coreComptetencyKeys = Competencies.filter(
-    ({ track }) => track === "Core",
+    ({ functionalArea: track }) => track === "Core",
   ).map(({ key }) => key);
 
   const coreSkillsList = Object.values(Skills).filter(({ competency }) =>
@@ -26,7 +26,7 @@ describe("nav-utils", () => {
 
   // ensure nav functions don't return undefined and loop both directions
   describe.each(coreSkillsList)(`for skill`, (skill) => {
-    const track = "Core";
+    const track = getTrack("core");
     describe(`${skill.id}`, () => {
       it.each([true, false])("should jump to the next competency", (rev) => {
         expect(jumpToNextCompetency({ skill, track, rev })).not.toBeUndefined();

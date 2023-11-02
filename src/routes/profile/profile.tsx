@@ -1,5 +1,4 @@
 import "./profile.css";
-import type { Track } from "../../data";
 import { Tracks } from "../../data";
 import { useData, useDataDispatch } from "../../context";
 
@@ -8,12 +7,6 @@ import type { ChangeEvent } from "react";
 import type { User } from "../../context";
 
 export const Profile = () => {
-  const trackOptions: { value: Track; label: Track }[] =
-    Tracks.map(chooseTrack);
-  function chooseTrack(track: Track) {
-    return { value: track, label: track };
-  }
-
   const { user } = useData();
 
   const dispatch = useDataDispatch();
@@ -21,7 +14,7 @@ export const Profile = () => {
   const [firstName, setFirstName] = useState(user?.firstName ?? "");
   const [lastName, setLastName] = useState(user?.lastName ?? "");
   const [email, setEmail] = useState(user?.email ?? "");
-  const [track, setTrack] = useState<Track | undefined>(user?.track);
+  const [track, setTrack] = useState<string>(user?.track?.key ?? Tracks[0].key);
   const [declaredLevel, setDeclaredLevel] = useState<string>(
     user?.declaredLevel ?? "",
   );
@@ -30,7 +23,7 @@ export const Profile = () => {
     firstName,
     lastName,
     email,
-    track,
+    track: Tracks.find((t) => t.key === track),
     declaredLevel,
   };
 
@@ -92,12 +85,14 @@ export const Profile = () => {
         <select
           className="form__input"
           onChange={(e: ChangeEvent<HTMLSelectElement>) => {
-            setTrack(e.target.value as Track);
+            setTrack(e.target.value);
           }}
           value={track}
         >
-          {trackOptions.map((option) => (
-            <option key={option.label}>{option.value}</option>
+          {Tracks.map((option) => (
+            <option key={option.key} value={option.key}>
+              {option.title}
+            </option>
           ))}
         </select>
       </div>

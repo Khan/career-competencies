@@ -1,13 +1,16 @@
 import type { Competency, Expectation } from ".";
 import { Matrix, Expectations } from ".";
 import type { useData } from "../context";
+import { getTrack } from "./tracks";
+
+const defaultTrack = getTrack("core");
 
 export function calculateCompetencies(
   data: ReturnType<typeof useData>,
 ): [[Competency, Expectation][], Expectation] {
   const { skills, user } = data;
   const competencyExpectation: [Competency, Expectation][] = Matrix(
-    user?.track ?? "Core",
+    user?.track ?? defaultTrack,
   ).byCompetency.map((competency) => {
     let expectationMet = Expectations[0]; // none
     for (const expectation of competency.expectations) {
@@ -55,7 +58,7 @@ export function calculateCompetencies(
         continue;
       }
 
-      const totalCompetencies = Matrix(user?.track ?? "Core").byCompetency
+      const totalCompetencies = Matrix(user?.track ?? defaultTrack).byCompetency
         .length;
       const competenciesAtExpectation = competencyExpectation.filter(
         ([_, e]) => e.value >= expectation.value,

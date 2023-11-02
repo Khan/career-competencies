@@ -1,5 +1,5 @@
 import { useData } from "../../context";
-import { calculateCompetencies, getLevel } from "../../data";
+import { calculateCompetencies, getLevel, getTrack } from "../../data";
 import "./result.css";
 
 export const Result = () => {
@@ -10,7 +10,7 @@ export const Result = () => {
 
   const levelMapping = getLevel(
     overallExpectation.value,
-    data.user?.track ?? "Core",
+    data.user?.track ?? getTrack("core"),
   );
 
   return (
@@ -37,9 +37,7 @@ export const Result = () => {
         {levelMapping && (
           <tr>
             <th>LEVEL MAPPING</th>
-            <td>
-              {getLevel(overallExpectation.value, data.user?.track ?? "Core")}
-            </td>
+            <td>{levelMapping}</td>
           </tr>
         )}
       </tfoot>

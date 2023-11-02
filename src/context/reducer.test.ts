@@ -2,7 +2,7 @@ import { expect, describe, it } from "@jest/globals";
 import { dataReducer } from "./reducer";
 import type { Action, State } from "./types";
 import type { UUID } from "../data";
-import { Skills } from "../data";
+import { Skills, getTrack } from "../data";
 
 export const SkillIDs = Object.keys(Skills) as UUID[];
 
@@ -12,7 +12,7 @@ describe("dataReducer", () => {
       firstName: "Ned",
       lastName: "Redmond",
       email: "ned@example.com",
-      track: "Software Engineer",
+      track: getTrack("softwareEngineer"),
       declaredLevel: "LEC 1 (Senior 1)",
     },
     skills: {
@@ -97,7 +97,7 @@ describe("dataReducer", () => {
         firstName: "Test",
         lastName: "Testmond",
         email: "test@example.com",
-        track: "Management",
+        track: getTrack("engineeringManager"),
         declaredLevel: "LEC X (Principal & Distinguished)",
       },
     };
@@ -113,7 +113,7 @@ describe("dataReducer", () => {
           firstName: "Red",
           lastName: "Nedmond",
           email: "red@example.com",
-          track: "IT Professional",
+          track: getTrack("itProfessional"),
           declaredLevel: "SRP II",
         },
         skills: {

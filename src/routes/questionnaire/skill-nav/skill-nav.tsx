@@ -1,5 +1,5 @@
 import { useData } from "../../../context";
-import { Matrix } from "../../../data";
+import { Matrix, getTrack } from "../../../data";
 import type { Skill } from "../../../data";
 import { NavArrow } from "./nav-arrow";
 import {
@@ -10,7 +10,7 @@ import {
 
 export const SkillNav = ({ skill }: { skill: Skill }) => {
   const { user } = useData();
-  const track = user?.track ?? "Core";
+  const track = user?.track ?? getTrack("core");
 
   const competency = Matrix(track).byCompetency.find(
     (c) => c.key === skill.competency,

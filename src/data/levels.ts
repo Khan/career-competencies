@@ -24,16 +24,15 @@ export const getLevel = (
 
 // These may need to be split into levels for different tracks in the future
 const Levels = (track: Track, expectationValue: number): string | null => {
-  switch (track) {
-    // So far, we only have levels for one track: Software Engineer
-    case "Software Engineer":
-      return SoftwareEngineer[expectationValue];
+  switch (true) {
+    case track.functions.includes("Engineering"):
+      return Engineering[expectationValue];
     default:
       return null;
   }
 };
 
-export const SoftwareEngineer: TrackLevels = [
+export const Engineering: TrackLevels = [
   null,
   "SRP I",
   "SRP II",

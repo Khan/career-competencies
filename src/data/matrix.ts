@@ -9,8 +9,8 @@ const PrimaryExpectations = Expectations.filter(
   (e) => !e.partial,
 ) as readonly Expectation[];
 
-const filterByTrack = (competency: Competency, selectedTrack: Track) => {
-  return competency.track === "Core" || selectedTrack === competency.track;
+const filterByTrack = (competency: Competency, track: Track) => {
+  return track.functions.includes(competency.functionalArea);
 };
 
 export const Matrix = (
