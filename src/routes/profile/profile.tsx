@@ -1,10 +1,10 @@
 import "./profile.css";
 import type { Track } from "../../data";
-import { SoftwareEngineer, Tracks } from "../../data";
+import { Tracks } from "../../data";
 import { useData, useDataDispatch } from "../../context";
-import Select from "react-select";
 
 import { useState } from "react";
+import type { ChangeEvent } from "react";
 import type { User } from "../../context";
 
 export const Profile = () => {
@@ -14,27 +14,17 @@ export const Profile = () => {
     return { value: track, label: track };
   }
 
-  const levelOptions: { value: string | null; label: string | null }[] =
-    SoftwareEngineer.map(chooseLevel);
-  function chooseLevel(level: string | null) {
-    return { value: level, label: level };
-  }
-
   const { user } = useData();
-
-  const firstNameState = user?.firstName;
-  const lastNameState = user?.lastName;
-  const emailState = user?.email;
-  const trackState = user?.track;
-  const levelState = user?.declaredLevel ?? null;
 
   const dispatch = useDataDispatch();
 
-  const [firstName, setFirstName] = useState(firstNameState ?? "");
-  const [lastName, setLastName] = useState(lastNameState ?? "");
-  const [email, setEmail] = useState(emailState ?? "");
-  const [track, setTrack] = useState<Track | undefined>(trackState);
-  const [declaredLevel, setDeclaredLevel] = useState<string | null>(levelState);
+  const [firstName, setFirstName] = useState(user?.firstName ?? "");
+  const [lastName, setLastName] = useState(user?.lastName ?? "");
+  const [email, setEmail] = useState(user?.email ?? "");
+  const [track, setTrack] = useState<Track | undefined>(user?.track);
+  const [declaredLevel, setDeclaredLevel] = useState<string>(
+    user?.declaredLevel ?? "",
+  );
 
   const profileData: User = {
     firstName,
@@ -99,31 +89,28 @@ export const Profile = () => {
         <label className="form__label" htmlFor="track">
           Career Track
         </label>
-        <Select
-          className="form__dropdown"
-          name="careerTrack"
-          value={{ value: track, label: track }}
-          options={trackOptions}
-          defaultValue={null}
-          onChange={(e) => {
-            e ? setTrack(e.value) : null;
+        <select
+          className="form__input"
+          onChange={(e: ChangeEvent<HTMLSelectElement>) => {
+            setTrack(e.target.value as Track);
           }}
-        />
+        >
+          {trackOptions.map((option) => (
+            <option key={option.label}>{option.value}</option>
+          ))}
+        </select>
       </div>
       <div>
         <label className="form__label" htmlFor="level">
           Current Level
         </label>
-        <Select
-          className="form__dropdown"
-          name="currentLevel"
-          value={{
-            value: declaredLevel,
-            label: declaredLevel,
-          }}
-          options={levelOptions}
+        <input
+          className="form__input"
+          id="currentLevel"
+          type="text"
+          value={declaredLevel}
           onChange={(e) => {
-            e ? setDeclaredLevel(e.value) : null;
+            setDeclaredLevel(e.target.value);
           }}
         />
       </div>
