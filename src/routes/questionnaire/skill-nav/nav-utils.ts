@@ -7,11 +7,14 @@ const increment = <T>(start: T, arr: readonly T[], rev?: boolean) => {
   return arr[loopIndex([...arr], index)];
 };
 
-export const jumpToNextExpectation = (
-  skill: Skill,
-  track: Track,
-  rev?: boolean,
-) => {
+export interface NavArgs {
+  skill: Skill;
+  track: Track;
+  rev?: boolean;
+}
+
+export const jumpToNextExpectation = (args: NavArgs) => {
+  const { skill, track, rev } = args;
   const expectationKeys = Matrix(track).byExpectation.map(({ key }) => key);
   const expectationKey = increment(skill.expectation, expectationKeys, rev);
   const expectation = Matrix(track).byExpectation.find(
@@ -23,11 +26,8 @@ export const jumpToNextExpectation = (
   return competency?.skills[0].id;
 };
 
-export const jumpToNextCompetency = (
-  skill: Skill,
-  track: Track,
-  rev?: boolean,
-) => {
+export const jumpToNextCompetency = (args: NavArgs) => {
+  const { skill, track, rev } = args;
   const competencyKeys = Matrix(track).byCompetency.map(({ key }) => key);
   const competencyKey = increment(skill.competency, competencyKeys, rev);
   const competency = Matrix(track).byCompetency.find(
@@ -47,5 +47,5 @@ const skillIdsByExpectation = (track: Track) =>
   Matrix(track).byExpectation.flatMap(({ competencies }) =>
     competencies.flatMap(({ skills }) => skills.map(({ id }) => id)),
   );
-export const getNextSkill = (skill: Skill, track: Track, rev?: boolean) =>
-  increment(skill.id, skillIdsByExpectation(track), rev);
+export const getNextSkill = (args: NavArgs) =>
+  increment(args.skill.id, skillIdsByExpectation(args.track), args.rev);
