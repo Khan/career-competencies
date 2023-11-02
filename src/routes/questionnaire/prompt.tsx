@@ -3,7 +3,7 @@ import type { Skill } from "../../data";
 import { useData, useDataDispatch } from "../../context";
 
 import "./questionnaire.css";
-import { Checkbox } from "./checkbox";
+import { Checkbox } from "../../components";
 import { Examples } from "./examples";
 import { SkillNav } from "./skill-nav";
 
@@ -25,6 +25,7 @@ export const Prompt = () => {
         label={"I can demonstrate this skill: " + skill.description}
         checked={skillState.checked ?? false}
         style={{ paddingTop: "2em" }}
+        size="xlarge"
         handleClick={() => {
           dispatch(
             skillState.checked

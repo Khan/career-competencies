@@ -4,13 +4,15 @@ import "./result.css";
 
 export const Result = () => {
   const data = useData();
+  const track = data.user?.track ?? getTrack("core");
 
   const [competencyExpectations, overallExpectation] =
     calculateCompetencies(data);
 
   const levelMapping = getLevel(
     overallExpectation.value,
-    data.user?.track ?? getTrack("core"),
+    competencyExpectations,
+    track,
   );
 
   return (

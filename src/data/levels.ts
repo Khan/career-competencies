@@ -1,3 +1,4 @@
+import type { Competency, Expectation } from ".";
 import type { Track } from "./tracks";
 
 // index 0 is below Beginner expectation-- then it goes:
@@ -16,9 +17,14 @@ type TrackLevels = [
 // if accessor number higher than levels, return highest level
 export const getLevel = (
   expectationValue: number,
+  _competencyExpectationValues: [Competency, Expectation][],
   track: Track,
 ): string | null => {
   const accessor = expectationValue > 7 ? 7 : expectationValue;
+  if (track.functions.includes("Management")) {
+    // TODO: https://github.com/Khan/career-competencies/issues/58
+    return null;
+  }
   return Levels(track, accessor);
 };
 
