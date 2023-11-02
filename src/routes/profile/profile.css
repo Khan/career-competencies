@@ -9,12 +9,24 @@
 .form__input {
   width: 100%;
   min-height: 3em;
+  padding-inline: unset;
 }
 
 #form__save-button {
-  background-color: blue;
   text-align: center;
   margin-top: 1em;
+  background-color: #646cff !important;
+  color: white;
+}
+
+#form__save-button:hover {
+  background-color: #535bf2 !important;
+}
+
+@media (prefers-color-scheme: light) {
+  #form__save-button:hover {
+    background-color: #747bff;
+  }
 }
 
 input[type="email"]::placeholder {
