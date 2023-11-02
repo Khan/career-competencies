@@ -97,7 +97,9 @@ export const Profile = () => {
           value={track}
         >
           {trackOptions.map((option) => (
-            <option key={option.label}>{option.value}</option>
+            <option key={option.label}>
+              {option.value === "Core" ? "Other" : option.value}
+            </option>
           ))}
         </select>
       </div>
