@@ -67,3 +67,11 @@ export const Expectations: readonly Expectation[] = [
     value: 9,
   },
 ] as const;
+
+export const getExpectation = (expectation: string): Expectation => {
+  const found = Expectations.find((e) => e.key === expectation);
+  if (!found) {
+    throw new Error(`Expectation not found: ${expectation}`);
+  }
+  return found;
+};

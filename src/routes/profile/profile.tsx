@@ -1,5 +1,5 @@
 import "./profile.css";
-import { Tracks } from "../../data";
+import { Expectations, Tracks } from "../../data";
 import { useData, useDataDispatch } from "../../context";
 
 import { useState } from "react";
@@ -15,8 +15,8 @@ export const Profile = () => {
   const [lastName, setLastName] = useState(user?.lastName ?? "");
   const [email, setEmail] = useState(user?.email ?? "");
   const [track, setTrack] = useState<string>(user?.track?.key ?? Tracks[0].key);
-  const [declaredLevel, setDeclaredLevel] = useState<string>(
-    user?.declaredLevel ?? "",
+  const [declaredExpectation, setExpectation] = useState<string>(
+    user?.currentExpectation?.key ?? Expectations[0].key,
   );
 
   const profileData: User = {
@@ -24,7 +24,7 @@ export const Profile = () => {
     lastName,
     email,
     track: Tracks.find((t) => t.key === track),
-    declaredLevel,
+    currentExpectation: Expectations.find((e) => e.key === declaredExpectation),
   };
 
   function handleSave() {
@@ -83,6 +83,7 @@ export const Profile = () => {
           Career Track
         </label>
         <select
+          id="track"
           className="form__input"
           onChange={(e: ChangeEvent<HTMLSelectElement>) => {
             setTrack(e.target.value);
@@ -97,18 +98,23 @@ export const Profile = () => {
         </select>
       </div>
       <div>
-        <label className="form__label" htmlFor="level">
-          Current Level
+        <label className="form__label" htmlFor="expectation">
+          Current Expectation
         </label>
-        <input
+        <select
+          id="expectation"
           className="form__input"
-          id="currentLevel"
-          type="text"
-          value={declaredLevel}
-          onChange={(e) => {
-            setDeclaredLevel(e.target.value);
+          onChange={(e: ChangeEvent<HTMLSelectElement>) => {
+            setExpectation(e.target.value);
           }}
-        />
+          value={declaredExpectation}
+        >
+          {Expectations.map((option) => (
+            <option key={option.key} value={option.key}>
+              {option.title}
+            </option>
+          ))}
+        </select>
       </div>
       <button type="submit" id="form__save-button">
         Save
