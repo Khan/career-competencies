@@ -2,18 +2,5 @@
 
 #radar-graph {
   margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-  #radar-graph {
-    width: 80%;
-  }
-}
-
-/* Make the graph much smaller on wide screens 
-    so that it doesn't take up the whole page. */
-@media (min-width: 1500px) {
-  #radar-graph {
-    width: 50%;
-  }
+  width: 100%;
 }

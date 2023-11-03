@@ -124,7 +124,6 @@ export const RadarGraph = () => {
       title: {
         color: chartColors.title,
         text: "Competency Graph",
-        display: true,
         padding: {
           top: 40,
           bottom: 20,
