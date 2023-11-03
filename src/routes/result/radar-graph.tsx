@@ -54,7 +54,7 @@ export const RadarGraph = () => {
   const lightMode = window.matchMedia("(prefers-color-scheme: light)").matches;
   const chartColors = lightMode ? lightModeColors : darkModeColors;
 
-  // Hard coding this for now
+  // Register the chart elements and plugins
   ChartJS.register(
     RadialLinearScale,
     PointElement,
@@ -68,6 +68,7 @@ export const RadarGraph = () => {
   const [competencyExpectations, overallExpectation] =
     calculateCompetencies(data);
 
+  // Get the label for the current competency level
   const levelMapping = getLevel(
     overallExpectation.value,
     competencyExpectations,
