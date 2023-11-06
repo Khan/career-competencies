@@ -2,8 +2,8 @@ import { useRef } from "react";
 import Clickable from "@khanacademy/wonder-blocks-clickable";
 import { PhosphorIcon } from "@khanacademy/wonder-blocks-icon";
 
-import Export from "@phosphor-icons/core/regular/export.svg";
-import DownloadSimple from "@phosphor-icons/core/regular/download-simple.svg";
+import Upload from "@phosphor-icons/core/regular/file-arrow-up.svg";
+import Download from "@phosphor-icons/core/regular/file-arrow-down.svg";
 
 import { useData, useDataDispatch } from "../../context";
 import "./data-functions.css";
@@ -26,21 +26,23 @@ const DataFunctions = () => {
       <div id="data-fns">
         <Clickable
           role="button"
-          aria-label="Export"
+          aria-label="Import JSON File"
+          onClick={handleImport}
+          id="import"
+          title="Import JSON File"
+        >
+          {() => <PhosphorIcon icon={Upload} size="large" />}
+        </Clickable>
+        <Clickable
+          role="button"
+          aria-label="Download JSON File"
           onClick={() => {
             exportData(data);
           }}
           id="export"
+          title="Download JSON File"
         >
-          {() => <PhosphorIcon icon={Export} size="large" />}
-        </Clickable>
-        <Clickable
-          role="button"
-          aria-label="Import"
-          onClick={handleImport}
-          id="import"
-        >
-          {() => <PhosphorIcon icon={DownloadSimple} size="large" />}
+          {() => <PhosphorIcon icon={Download} size="large" />}
         </Clickable>
         <input
           type="file"
