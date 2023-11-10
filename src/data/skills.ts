@@ -563,8 +563,7 @@ export const Skills: Record<UUID, Skill> = {
     competency: "communicationAndEngagement",
     expectation: "beginner",
     id: "d576de61-b103-4f83-b75c-239678be8315",
-    description:
-      "When you learn something new, or solve a problem, you develop a habit of documentation that engages others in the learning process.",
+    description: "Your written communication is clear and concise.",
   },
   "eece8e6b-532c-4732-b47d-2c9e7cb9f07b": {
     competency: "communicationAndEngagement",
