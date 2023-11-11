@@ -1,8 +1,19 @@
 #profile-form {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  row-gap: 1em;
+  row-gap: 1.5em;
+  width: 100%;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
 #profile-form * {
@@ -10,25 +21,38 @@
 }
 
 .form__input {
-  min-height: 2em;
   box-sizing: border-box;
-  font-size: 0.8em;
+  font-size: 1em;
   padding-inline: 0.2em;
 }
 
-#form__save-button {
+#blocker-msg {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#blocker-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+  height: min-content;
+}
+
+.profile-btn {
   text-align: center;
-  margin-top: 1em;
   background-color: #646cff !important;
   color: white;
 }
 
-#form__save-button:hover {
+.profile-btn:hover {
   background-color: #535bf2 !important;
 }
 
 @media (prefers-color-scheme: light) {
-  #form__save-button:hover {
+  .profile-btn:hover {
     background-color: #747bff;
   }
 }
