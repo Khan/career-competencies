@@ -21,37 +21,37 @@ export const Tracks: readonly Track[] = [
   {
     key: "dataInsights",
     title: "Data Insights",
-    functions: ["Engineering", "Core"],
+    functions: ["Core", "Engineering"],
   },
   {
     key: "itProfessional",
     title: "IT Professional",
-    functions: ["Engineering", "Core"],
+    functions: ["Core", "Engineering"],
   },
   {
     key: "engManagement",
     title: "Management, Engineering",
-    functions: ["Engineering", "Management", "Core"],
+    functions: ["Core", "Management", "Engineering"],
   },
   {
     key: "softwareEngineer",
     title: "Software Engineer",
-    functions: ["Engineering", "Core"],
+    functions: ["Core", "Engineering"],
   },
   {
     key: "qualityAnalyst",
     title: "Quality Analyst",
-    functions: ["Engineering", "Core"],
+    functions: ["Core", "Engineering"],
   },
   {
     key: "qualityEngineer",
     title: "Quality Engineer",
-    functions: ["Engineering", "Core"],
+    functions: ["Core", "Engineering"],
   },
   {
     key: "otherManagement",
     title: "Management, Other",
-    functions: ["Management", "Core"],
+    functions: ["Core", "Management"],
   },
 ] as const;
 

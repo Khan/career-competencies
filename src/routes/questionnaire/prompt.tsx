@@ -1,5 +1,5 @@
 import { useLoaderData } from "react-router-dom";
-import type { Skill } from "../../data";
+import { Competencies, type Skill } from "../../data";
 import { useData, useDataDispatch } from "../../context";
 
 import "./questionnaire.css";
@@ -17,8 +17,15 @@ export const Prompt = () => {
     examples: {},
   };
 
+  const functionalArea = Competencies.find(
+    ({ key }) => key === skill.competency,
+  )?.functionalArea;
+
   return (
     <div id="prompt">
+      <span style={{ textTransform: "uppercase", fontSize: "0.8em" }}>
+        {functionalArea} Competency Skill
+      </span>
       <SkillNav skill={skill} />
       <Checkbox
         id={skill.id}
